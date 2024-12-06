@@ -1,0 +1,9 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1733509315
+download.png::CompressedTexture2D::2187404282223933199::1733508962::1733509315::1::::<><>::
+README.md::TextFile::-1::1733508962::0::1::::<><>::
+::res://torri/::1733508962
+torre.gd::GDScript::-1::1733508962::0::1::::<>StaticBody2D<>res://download.png::
+torre.tscn::PackedScene::8126681050112735145::1733508962::0::1::::<><>::res://torri/torre.gd<>uid://6fuh1woy0nj8::::res://download.png
+::res://World/::1733508962
+world.tscn::PackedScene::138315068722508341::1733508962::0::1::::<><>::uid://6fuh1woy0nj8::::res://download.png<>uid://dn1viqrgtvoa0::::res://torri/torre.tscn
