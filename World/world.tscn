@@ -1,26 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=5 format=3 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Texture2D" uid="uid://6fuh1woy0nj8" path="res://download.png" id="1_58l80"]
 [ext_resource type="PackedScene" uid="uid://dn1viqrgtvoa0" path="res://torri/torre.tscn" id="2_wah31"]
+[ext_resource type="PackedScene" uid="uid://c4rhq25lvjkjr" path="res://Truppe/truppa.tscn" id="3_54vkq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
-distance = 178.0
+distance = 173.0
 
 [node name="World" type="Node2D"]
 
 [node name="PavimentoProvvisorio" type="StaticBody2D" parent="."]
 
 [node name="Download" type="Sprite2D" parent="PavimentoProvvisorio"]
-position = Vector2(944, 901)
-scale = Vector2(9.72222, 1.40551)
+position = Vector2(961.5, 901)
+scale = Vector2(9.76263, 1.40551)
 texture = ExtResource("1_58l80")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PavimentoProvvisorio"]
 position = Vector2(948, 897)
 shape = SubResource("WorldBoundaryShape2D_l0w4d")
 
-[node name="Torre" parent="." instance=ExtResource("2_wah31")]
+[node name="Torri" type="Node" parent="."]
+
+[node name="Torre" parent="Torri" groups=["Nemico"] instance=ExtResource("2_wah31")]
 position = Vector2(110, 591)
 
-[node name="Torre2" parent="." instance=ExtResource("2_wah31")]
+[node name="Torre3" parent="Torri" groups=["Nemico"] instance=ExtResource("2_wah31")]
+position = Vector2(180, 589)
+
+[node name="Torre2" parent="Torri" groups=["Alleato"] instance=ExtResource("2_wah31")]
 position = Vector2(1773, 591)
+
+[node name="Truppa" parent="." groups=["Alleato"] instance=ExtResource("3_54vkq")]
+position = Vector2(759, 802)

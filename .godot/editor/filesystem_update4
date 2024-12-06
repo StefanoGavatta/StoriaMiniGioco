@@ -1,0 +1,8 @@
+res://debugMonnezza/sprite_2d.gd
+res://debugMonnezza/character_body_2d.tscn
+res://World/world.tscn
+res://torri/torre.tscn
+res://ScriptUtili/Parabola.txt
+res://Truppe/truppa.tscn
+res://Truppe/truppa.gd
+res://Truppe/fight_node.gd
