@@ -18,6 +18,10 @@ target_position = Vector2(-134, 0)
 [node name="FightNode" type="Node" parent="."]
 script = ExtResource("2_vx8hl")
 
+[node name="Timer" type="Timer" parent="FightNode"]
+wait_time = 2.0
+one_shot = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3, 9.53674e-07)
 scale = Vector2(0.163603, 0.25)
@@ -26,3 +30,5 @@ texture = ExtResource("1_v55oj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -1)
 shape = SubResource("RectangleShape2D_nwkh4")
+
+[connection signal="timeout" from="FightNode/Timer" to="FightNode" method="attacca"]

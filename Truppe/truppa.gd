@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var vita: int
-@export var danno: int
+@export var vita: int = 100
+@export var danno: int = 10
 @export var velocità: int = 1000
 @export var direction: Vector2 
 
