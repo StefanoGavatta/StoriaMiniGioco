@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=8 format=3 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Texture2D" uid="uid://6fuh1woy0nj8" path="res://download.png" id="1_58l80"]
 [ext_resource type="PackedScene" uid="uid://dn1viqrgtvoa0" path="res://torri/torre.tscn" id="2_wah31"]
 [ext_resource type="PackedScene" uid="uid://c4rhq25lvjkjr" path="res://Truppe/truppa.tscn" id="3_54vkq"]
+[ext_resource type="Texture2D" uid="uid://mr5rhuo0atsg" path="res://ImmaginiRandomDebug/GoblinPugnale.jpg" id="4_hnxse"]
+[ext_resource type="Texture2D" uid="uid://b5rri1xkja3jr" path="res://ImmaginiRandomDebug/GoblinLanciere.jpg" id="5_h85dc"]
+[ext_resource type="Texture2D" uid="uid://ox7eaxnuwhcf" path="res://ImmaginiRandomDebug/GiganteGoblin.jpg" id="6_3dx0w"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
 distance = 173.0
@@ -23,9 +26,6 @@ shape = SubResource("WorldBoundaryShape2D_l0w4d")
 
 [node name="Torri" type="Node" parent="."]
 
-[node name="Torre" parent="Torri" groups=["Nemico"] instance=ExtResource("2_wah31")]
-position = Vector2(110, 591)
-
 [node name="Torre3" parent="Torri" groups=["Nemico"] instance=ExtResource("2_wah31")]
 position = Vector2(180, 589)
 
@@ -33,21 +33,36 @@ position = Vector2(180, 589)
 position = Vector2(1773, 591)
 
 [node name="Truppa3" parent="." groups=["Nemico"] instance=ExtResource("3_54vkq")]
-position = Vector2(741, 785)
+position = Vector2(716, 701)
 direction = Vector2(1, 0)
 
 [node name="Truppa7" parent="." groups=["Nemico"] instance=ExtResource("3_54vkq")]
-position = Vector2(224, 791)
+position = Vector2(350, 700)
 direction = Vector2(1, 0)
 
 [node name="Truppa4" parent="." groups=["Alleato"] instance=ExtResource("3_54vkq")]
-position = Vector2(1194, 780)
+position = Vector2(1275, 701)
 direction = Vector2(-1, 0)
 
 [node name="Truppa5" parent="." groups=["Alleato"] instance=ExtResource("3_54vkq")]
-position = Vector2(1597, 785)
+position = Vector2(1489, 699)
 direction = Vector2(-1, 0)
 
 [node name="Truppa6" parent="." groups=["Alleato"] instance=ExtResource("3_54vkq")]
-position = Vector2(1679, 788)
+position = Vector2(1592, 698)
 direction = Vector2(-1, 0)
+
+[node name="Pulsante1" type="Sprite2D" parent="."]
+position = Vector2(761, 981)
+scale = Vector2(0.630208, 0.630208)
+texture = ExtResource("4_hnxse")
+
+[node name="Pulsante2" type="Sprite2D" parent="."]
+position = Vector2(948, 980)
+scale = Vector2(0.721591, 0.721591)
+texture = ExtResource("5_h85dc")
+
+[node name="Pulsante3" type="Sprite2D" parent="."]
+position = Vector2(1129, 980)
+scale = Vector2(0.664063, 0.664063)
+texture = ExtResource("6_3dx0w")

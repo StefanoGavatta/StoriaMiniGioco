@@ -15,7 +15,7 @@ script = ExtResource("1_27i6w")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(20, 0)
-rotation = 3.14159
+rotation = -3.14159
 target_position = Vector2(-17, 0)
 
 [node name="FightNode" type="Node" parent="."]
