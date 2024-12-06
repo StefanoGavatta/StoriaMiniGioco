@@ -6,12 +6,17 @@ extends CharacterBody2D
 @export var direction: Vector2 
 
 var is_fighting: bool = false
-func _ready() -> void:
-	#la direction verrà poi successivamente decisa in base 
-	#al gruppo di appartenenza idem per lo sxpecchio della
-	#sprite, intanto X debug è -1
-	direction = Vector2(-1,0)
+
+var GruppoAvversario = func():
+	if is_in_group("Alleato"):
+		GruppoAvversario = "Nemico"
+	else:
+		GruppoAvversario = "Alleato"
+
 	
+
+
+
 func _physics_process(delta: float) -> void:
 	if !is_fighting:
 		velocity = direction * velocità * delta
@@ -21,7 +26,8 @@ func _physics_process(delta: float) -> void:
 
 func prendiDanno(danno:int):
 	vita -= danno
-
+	if vita<=0:
+		kill()
 
 func kill():
 	queue_free()

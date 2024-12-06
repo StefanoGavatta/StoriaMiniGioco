@@ -4,3 +4,4 @@ res://torri/torre.tscn
 res://Truppe/truppa.tscn
 res://Truppe/fight_node.gd
 res://Truppe/truppa.gd
+res://Truppe/assemblatore_gruppo.gd
