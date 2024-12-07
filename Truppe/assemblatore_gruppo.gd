@@ -1,4 +1,9 @@
+@icon("res://IconGodotNode/node/icon_magnifier.png")
 extends Node
+
+#nodo che seleziona in base al gruppo di appartenenza quali tipi di valori assegnare
+#alla truppa
+#si autoDistrugge alla fine
 
 @onready var RayCast: RayCast2D = $"../RayCast2D"
 @onready var Sprite: Sprite2D = $"../Sprite2D"
@@ -13,10 +18,14 @@ func _ready() -> void:
 		RayCast.position = posizione_nemico.position
 		Sprite.flip_h = true
 		RayCast.rotation = deg_to_rad(180)
+		truppa.set_collision_layer_value(8,true)
+		RayCast.set_collision_mask_value(7,true)
 	else:
 		truppa.direction = Vector2(-1,0)
 		RayCast.rotation = deg_to_rad(0)
 		RayCast.position = posizione_alleato.position
 		Sprite.flip_h = false
+		truppa.set_collision_layer_value(7,true)
+		RayCast.set_collision_mask_value(8,true)
 		
 	queue_free()

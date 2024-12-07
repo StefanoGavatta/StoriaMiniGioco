@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Truppe/assemblatore_gruppo.gd" id="4_nxlg3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwkh4"]
-size = Vector2(35, 46)
+size = Vector2(35, 91)
 
 [node name="Truppa" type="CharacterBody2D"]
 collision_mask = 2
@@ -17,6 +17,16 @@ script = ExtResource("1_27i6w")
 position = Vector2(20, 0)
 rotation = -3.14159
 target_position = Vector2(-17, 0)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 9.53674e-07)
+scale = Vector2(0.163603, 0.25)
+texture = ExtResource("1_v55oj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -21.5)
+shape = SubResource("RectangleShape2D_nwkh4")
 
 [node name="FightNode" type="Node" parent="."]
 script = ExtResource("2_vx8hl")
@@ -25,22 +35,13 @@ script = ExtResource("2_vx8hl")
 wait_time = 2.0
 one_shot = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3, 9.53674e-07)
-scale = Vector2(0.163603, 0.25)
-texture = ExtResource("1_v55oj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -1)
-shape = SubResource("RectangleShape2D_nwkh4")
-
 [node name="AssemblatoreGruppo" type="Node" parent="."]
 script = ExtResource("4_nxlg3")
 
 [node name="PosizioneNemico" type="Marker2D" parent="AssemblatoreGruppo"]
-position = Vector2(20, 0)
+position = Vector2(20, -24)
 
 [node name="PosizioneAlleato" type="Marker2D" parent="AssemblatoreGruppo"]
-position = Vector2(-15, 0)
+position = Vector2(-15, -23)
 
 [connection signal="timeout" from="FightNode/Timer" to="FightNode" method="attacca"]

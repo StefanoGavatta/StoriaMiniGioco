@@ -24,3 +24,8 @@ window/stretch/mode="canvas_items"
 
 Nemico="Gruppo nemico"
 Alleato="gruppo alleato"
+
+[layer_names]
+
+2d_physics/layer_7="Alleati"
+2d_physics/layer_8="Nemici"

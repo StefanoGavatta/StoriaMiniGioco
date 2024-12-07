@@ -1,11 +1,9 @@
-@icon("res://download.png")
+@icon("res://IconGodotNode/node/icon_map.png")
 extends StaticBody2D
 
 var vita: int = 40
 var danno: int
 
-var produzione: float
-var capienza: int
 
 @onready var timer: Timer = $Produzione
 
