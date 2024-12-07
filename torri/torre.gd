@@ -5,10 +5,6 @@ var vita: int = 40
 var danno: int
 
 
-@onready var timer: Timer = $Produzione
-
-
-
 func prendiDanno(danno:int):
 	vita -= danno
 	print(vita)

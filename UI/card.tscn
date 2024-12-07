@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgi6k3m3bmcji"]
+
+[ext_resource type="Script" path="res://UI/card.gd" id="1_qsvci"]
+[ext_resource type="Texture2D" uid="uid://mr5rhuo0atsg" path="res://ImmaginiRandomDebug/GoblinPugnale.jpg" id="2_akorr"]
+
+[sub_resource type="Animation" id="Animation_8n6rf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(204, 192)]
+}
+
+[sub_resource type="Animation" id="Animation_xalm0"]
+resource_name = "ingrandimento"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(242, 321), Vector2(308, 403)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lcv8e"]
+_data = {
+"RESET": SubResource("Animation_8n6rf"),
+"ingrandimento": SubResource("Animation_xalm0")
+}
+
+[node name="Card" type="TextureRect"]
+offset_right = 204.0
+offset_bottom = 192.0
+texture = ExtResource("2_akorr")
+expand_mode = 1
+script = ExtResource("1_qsvci")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lcv8e")
+}
+
+[connection signal="mouse_entered" from="." to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_mouse_exited"]

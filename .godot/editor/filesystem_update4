@@ -3,3 +3,7 @@ res://Truppe/assemblatore_gruppo.gd
 res://Truppe/fight_node.gd
 res://World/world.tscn
 res://torri/torre.tscn
+res://UI/card_selector.tscn
+res://torri/torre.gd
+res://UI/card.gd
+res://UI/card.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=9 format=3 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Texture2D" uid="uid://6fuh1woy0nj8" path="res://download.png" id="1_58l80"]
 [ext_resource type="PackedScene" uid="uid://dn1viqrgtvoa0" path="res://torri/torre.tscn" id="2_wah31"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://mr5rhuo0atsg" path="res://ImmaginiRandomDebug/GoblinPugnale.jpg" id="4_hnxse"]
 [ext_resource type="Texture2D" uid="uid://b5rri1xkja3jr" path="res://ImmaginiRandomDebug/GoblinLanciere.jpg" id="5_h85dc"]
 [ext_resource type="Texture2D" uid="uid://ox7eaxnuwhcf" path="res://ImmaginiRandomDebug/GiganteGoblin.jpg" id="6_3dx0w"]
+[ext_resource type="PackedScene" uid="uid://bgi6k3m3bmcji" path="res://UI/card.tscn" id="7_5kl23"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
 distance = 173.0
@@ -78,3 +79,9 @@ texture = ExtResource("5_h85dc")
 position = Vector2(1129, 980)
 scale = Vector2(0.664063, 0.664063)
 texture = ExtResource("6_3dx0w")
+
+[node name="Card" parent="." instance=ExtResource("7_5kl23")]
+offset_left = 461.0
+offset_top = 217.0
+offset_right = 665.0
+offset_bottom = 1037.0
