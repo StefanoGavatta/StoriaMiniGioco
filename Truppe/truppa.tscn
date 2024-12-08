@@ -12,6 +12,7 @@ size = Vector2(35, 91)
 collision_mask = 2
 script = ExtResource("1_27i6w")
 "velocità" = 5000
+metadata/_edit_group_ = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(20, 0)

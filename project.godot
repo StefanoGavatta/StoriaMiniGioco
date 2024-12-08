@@ -25,7 +25,15 @@ window/stretch/mode="canvas_items"
 Nemico="Gruppo nemico"
 Alleato="gruppo alleato"
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [layer_names]
 
 2d_physics/layer_7="Alleati"
 2d_physics/layer_8="Nemici"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

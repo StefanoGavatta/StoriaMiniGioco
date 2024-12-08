@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwygssc405sua"]
+
+[ext_resource type="PackedScene" uid="uid://dg3a2aq0axjau" path="res://UI/card.tscn" id="1_lelfj"]
+[ext_resource type="Texture2D" uid="uid://mr5rhuo0atsg" path="res://ImmaginiRandomDebug/GoblinPugnale.jpg" id="2_y888j"]
+[ext_resource type="Texture2D" uid="uid://b5rri1xkja3jr" path="res://ImmaginiRandomDebug/GoblinLanciere.jpg" id="3_voegw"]
+[ext_resource type="Texture2D" uid="uid://ox7eaxnuwhcf" path="res://ImmaginiRandomDebug/GiganteGoblin.jpg" id="4_qbffu"]
+
+[node name="CardContainer" type="Control"]
+layout_mode = 3
+anchor_left = 0.246
+anchor_top = 0.32
+anchor_right = 0.246
+anchor_bottom = 0.32
+offset_left = -472.32
+offset_top = -345.6
+offset_right = 471.68
+offset_bottom = 0.399963
+
+[node name="Card" parent="." instance=ExtResource("1_lelfj")]
+offset_left = 48.0
+offset_top = 64.0
+offset_right = 48.0
+offset_bottom = 64.0
+image = ExtResource("2_y888j")
+
+[node name="Card2" parent="." instance=ExtResource("1_lelfj")]
+offset_left = 368.0
+offset_top = 64.0
+offset_right = 368.0
+offset_bottom = 64.0
+image = ExtResource("3_voegw")
+
+[node name="Card3" parent="." instance=ExtResource("1_lelfj")]
+offset_left = 688.0
+offset_top = 64.0
+offset_right = 688.0
+offset_bottom = 64.0
+image = ExtResource("4_qbffu")
