@@ -4,7 +4,6 @@ extends StaticBody2D
 var vita: int = 40
 var danno: int
 
-
 func prendiDanno(danno:int):
 	vita -= danno
 	print(vita)

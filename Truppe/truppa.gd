@@ -14,10 +14,6 @@ var GruppoAvversario = func():
 	else:
 		GruppoAvversario = "Alleato"
 
-	
-
-
-
 func _physics_process(delta: float) -> void:
 	if !is_fighting:
 		velocity = direction * velocità * delta

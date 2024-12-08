@@ -1,8 +1,10 @@
+Marker2D
+Label
+Timer
 Node
 Button
 Control
 AnimationPlayer
-Label
 VSplitContainer
 VBoxContainer
 HBoxContainer
@@ -10,5 +12,3 @@ TextureRect
 CanvasLayer
 TextureProgressBar
 ColorRect
-Marker2D
-Timer

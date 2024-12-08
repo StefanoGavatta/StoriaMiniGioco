@@ -16,23 +16,29 @@ offset_top = -345.6
 offset_right = 471.68
 offset_bottom = 0.399963
 
-[node name="Card" parent="." instance=ExtResource("1_lelfj")]
+[node name="Spada" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 48.0
 offset_top = 64.0
 offset_right = 48.0
 offset_bottom = 64.0
 image = ExtResource("2_y888j")
+tipoCarta = "Spada"
+costo = 50
 
-[node name="Card2" parent="." instance=ExtResource("1_lelfj")]
+[node name="Lancia" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 368.0
 offset_top = 64.0
 offset_right = 368.0
 offset_bottom = 64.0
 image = ExtResource("3_voegw")
+tipoCarta = "Lancia"
+costo = 80
 
-[node name="Card3" parent="." instance=ExtResource("1_lelfj")]
+[node name="Gigante" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 688.0
 offset_top = 64.0
 offset_right = 688.0
 offset_bottom = 64.0
 image = ExtResource("4_qbffu")
+tipoCarta = "Gigante"
+costo = 130

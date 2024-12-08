@@ -1,7 +1,9 @@
-res://Truppe/truppa.tscn
-res://Truppe/truppa.gd
 res://World/world.tscn
+res://Giocatore/gestore_giocatore.gd
 res://torri/torre.tscn
 res://UI/card.tscn
 res://UI/card_container.tscn
 res://UI/card.gd
+res://torri/torre.gd
+res://Truppe/truppa.gd
+res://Truppe/truppa.tscn

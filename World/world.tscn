@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=7 format=3 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Texture2D" uid="uid://6fuh1woy0nj8" path="res://download.png" id="1_58l80"]
 [ext_resource type="PackedScene" uid="uid://dn1viqrgtvoa0" path="res://torri/torre.tscn" id="2_wah31"]
 [ext_resource type="Texture2D" uid="uid://mr5rhuo0atsg" path="res://ImmaginiRandomDebug/GoblinPugnale.jpg" id="4_hnxse"]
+[ext_resource type="Script" path="res://Giocatore/gestore_giocatore.gd" id="4_ppx6u"]
 [ext_resource type="PackedScene" uid="uid://dwygssc405sua" path="res://UI/card_container.tscn" id="5_k2s1r"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
@@ -41,6 +42,21 @@ position = Vector2(1773, 591)
 collision_layer = 65
 
 [node name="GestoreGiocatore" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_ppx6u")
+
+[node name="ValutaTimer" type="Timer" parent="GestoreGiocatore"]
+wait_time = 0.2
+autostart = true
+
+[node name="Posizionatore1" type="Marker2D" parent="GestoreGiocatore"]
+position = Vector2(1749, 716)
+
+[node name="Posizionatore2" type="Marker2D" parent="GestoreGiocatore"]
+position = Vector2(1749, 692)
+
+[node name="Posizionatore3" type="Marker2D" parent="GestoreGiocatore"]
+position = Vector2(1749, 675)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -53,6 +69,7 @@ offset_right = 1923.0
 offset_bottom = 1079.0
 grow_horizontal = 2
 grow_vertical = 0
+metadata/_edit_lock_ = true
 
 [node name="CardContainer" parent="UI" instance=ExtResource("5_k2s1r")]
 layout_mode = 1
@@ -66,3 +83,14 @@ offset_right = 471.653
 offset_bottom = -0.289063
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 1554.0
+offset_top = 876.0
+offset_right = 1781.0
+offset_bottom = 955.0
+theme_override_font_sizes/font_size = 56
+text = "dawdaw"
+
+[connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]
