@@ -23,9 +23,8 @@ func ControllaTruppa(card:Card)->bool:
 		aggiornaValore()
 		return true
 	else:
-	#fai qualche effetto strano
 		return false
-		
+		#fai qualche effetto strano
 
 func istanziaTruppa(tipoTruppa:String):
 	var posizioni = [$Posizionatore1,$Posizionatore2,$Posizionatore3]
