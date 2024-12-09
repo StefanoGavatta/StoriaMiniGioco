@@ -1,3 +1,4 @@
+@icon("res://IconGodotNode/color/icon_map_2.png")
 extends Node2D
 
 @onready var carica_nuova_nuvola: Timer = $Timer
@@ -17,4 +18,4 @@ func crea_nuvola() -> void:
 	nuova_nuvola.texture = immagini.pick_random()
 	nuova_nuvola.velocità = randi_range(40,240)
 	add_child(nuova_nuvola)
-	carica_nuova_nuvola.wait_time = randi_range(3,10)
+	carica_nuova_nuvola.wait_time = randi_range(8,16)
