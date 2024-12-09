@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0teyp5juwkde"]
+
+[ext_resource type="Script" path="res://World/Nuvole/nuvola.gd" id="1_uu0mw"]
+
+[node name="Nuvola" type="Sprite2D"]
+script = ExtResource("1_uu0mw")
+
+[node name="AutoDistruzione" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="AutoDistruzione" to="." method="_on_auto_distruzione_timeout"]

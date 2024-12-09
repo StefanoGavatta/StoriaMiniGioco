@@ -7,3 +7,6 @@ res://Truppe/knockback.gd
 res://Truppe/fight_node.gd
 res://Truppe/truppa.gd
 res://Giocatore/gestore_giocatore.gd
+res://World/background.gd
+res://World/Nuvole/nuvola.tscn
+res://World/Nuvole/nuvola.gd

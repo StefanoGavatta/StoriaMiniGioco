@@ -1,6 +1,8 @@
 Timer
-Node
 Marker2D
+Sprite2D
+Node2D
+Node
 Label
 Button
 Control
@@ -10,5 +12,3 @@ VBoxContainer
 HBoxContainer
 TextureRect
 CanvasLayer
-TextureProgressBar
-ColorRect

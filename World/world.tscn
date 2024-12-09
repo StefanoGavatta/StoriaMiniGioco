@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=10 format=3 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Texture2D" uid="uid://6fuh1woy0nj8" path="res://download.png" id="1_58l80"]
+[ext_resource type="Texture2D" uid="uid://brvp4s2cgqpv4" path="res://BackGround/B1013-3.png" id="1_ff6wj"]
+[ext_resource type="Script" path="res://World/background.gd" id="1_quvg8"]
 [ext_resource type="PackedScene" uid="uid://dn1viqrgtvoa0" path="res://torri/torre.tscn" id="2_wah31"]
 [ext_resource type="Texture2D" uid="uid://mr5rhuo0atsg" path="res://ImmaginiRandomDebug/GoblinPugnale.jpg" id="4_hnxse"]
 [ext_resource type="Script" path="res://Giocatore/gestore_giocatore.gd" id="4_ppx6u"]
@@ -12,8 +14,36 @@ distance = 173.0
 
 [node name="World" type="Node2D"]
 
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource("1_quvg8")
+
+[node name="B1013-3" type="Sprite2D" parent="Background"]
+position = Vector2(973, 205)
+scale = Vector2(3.89795, 3.89795)
+texture = ExtResource("1_ff6wj")
+
+[node name="posizione1" type="Marker2D" parent="Background"]
+position = Vector2(-464, 37)
+
+[node name="posizione2" type="Marker2D" parent="Background"]
+position = Vector2(-464, 338)
+
+[node name="posizione3" type="Marker2D" parent="Background"]
+position = Vector2(-464, 188)
+
+[node name="posizione4" type="Marker2D" parent="Background"]
+position = Vector2(-464, 117)
+
+[node name="posizione5" type="Marker2D" parent="Background"]
+position = Vector2(-464, 282)
+
+[node name="Timer" type="Timer" parent="Background"]
+autostart = true
+
 [node name="PavimentoProvvisorio" type="StaticBody2D" parent="."]
 collision_layer = 3
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Download" type="Sprite2D" parent="PavimentoProvvisorio"]
 modulate = Color(0, 0, 0, 1)
@@ -59,12 +89,6 @@ position = Vector2(1750, 688)
 [node name="Posizionatore3" type="Marker2D" parent="GestoreGiocatore"]
 position = Vector2(1749, 669)
 
-[node name="Truppa" parent="GestoreGiocatore" groups=["Nemico"] instance=ExtResource("5_6e0vr")]
-position = Vector2(278, 685)
-
-[node name="Truppa2" parent="GestoreGiocatore" groups=["Nemico"] instance=ExtResource("5_6e0vr")]
-position = Vector2(240, 695)
-
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 7
@@ -100,4 +124,11 @@ offset_bottom = 960.0
 theme_override_font_sizes/font_size = 56
 text = "TEMPO"
 
+[node name="Truppa" parent="." groups=["Nemico"] instance=ExtResource("5_6e0vr")]
+position = Vector2(278, 685)
+
+[node name="Truppa2" parent="." groups=["Nemico"] instance=ExtResource("5_6e0vr")]
+position = Vector2(240, 695)
+
+[connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]
