@@ -1,9 +1,9 @@
 res://World/world.tscn
-res://Giocatore/gestore_giocatore.gd
 res://torri/torre.tscn
 res://UI/card.tscn
 res://UI/card_container.tscn
-res://UI/card.gd
-res://torri/torre.gd
-res://Truppe/truppa.gd
 res://Truppe/truppa.tscn
+res://Truppe/knockback.gd
+res://Truppe/fight_node.gd
+res://Truppe/truppa.gd
+res://Giocatore/gestore_giocatore.gd

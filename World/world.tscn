@@ -51,13 +51,13 @@ wait_time = 0.05
 autostart = true
 
 [node name="Posizionatore1" type="Marker2D" parent="GestoreGiocatore"]
-position = Vector2(1749, 716)
+position = Vector2(1750, 708)
 
 [node name="Posizionatore2" type="Marker2D" parent="GestoreGiocatore"]
-position = Vector2(1749, 692)
+position = Vector2(1750, 688)
 
 [node name="Posizionatore3" type="Marker2D" parent="GestoreGiocatore"]
-position = Vector2(1749, 675)
+position = Vector2(1749, 669)
 
 [node name="Truppa" parent="GestoreGiocatore" groups=["Nemico"] instance=ExtResource("5_6e0vr")]
 position = Vector2(278, 685)
@@ -93,11 +93,11 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 1554.0
-offset_top = 876.0
-offset_right = 1781.0
-offset_bottom = 955.0
+offset_left = 1589.0
+offset_top = 881.0
+offset_right = 1786.0
+offset_bottom = 960.0
 theme_override_font_sizes/font_size = 56
-text = "dawdaw"
+text = "TEMPO"
 
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]

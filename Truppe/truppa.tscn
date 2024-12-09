@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4rhq25lvjkjr"]
+[gd_scene load_steps=7 format=3 uid="uid://c4rhq25lvjkjr"]
 
 [ext_resource type="Script" path="res://Truppe/truppa.gd" id="1_27i6w"]
 [ext_resource type="Texture2D" uid="uid://mr5rhuo0atsg" path="res://ImmaginiRandomDebug/GoblinPugnale.jpg" id="1_v55oj"]
 [ext_resource type="Script" path="res://Truppe/fight_node.gd" id="2_vx8hl"]
 [ext_resource type="Script" path="res://Truppe/assemblatore_gruppo.gd" id="4_nxlg3"]
+[ext_resource type="Script" path="res://Truppe/knockback.gd" id="4_rfnu0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwkh4"]
 size = Vector2(35, 91)
@@ -36,6 +37,13 @@ script = ExtResource("2_vx8hl")
 wait_time = 2.0
 one_shot = true
 
+[node name="Knockback" type="Node" parent="."]
+script = ExtResource("4_rfnu0")
+
+[node name="KnockBack" type="Timer" parent="Knockback"]
+wait_time = 0.5
+one_shot = true
+
 [node name="AssemblatoreGruppo" type="Node" parent="."]
 script = ExtResource("4_nxlg3")
 
@@ -45,4 +53,5 @@ position = Vector2(20, -24)
 [node name="PosizioneAlleato" type="Marker2D" parent="AssemblatoreGruppo"]
 position = Vector2(-15, -23)
 
+[connection signal="preso_Danno" from="." to="Knockback" method="_on_truppa_preso_danno"]
 [connection signal="timeout" from="FightNode/Timer" to="FightNode" method="attacca"]

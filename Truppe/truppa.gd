@@ -8,6 +8,8 @@ extends CharacterBody2D
 
 var is_fighting: bool = false
 
+signal preso_Danno
+
 var GruppoAvversario = func():
 	if is_in_group("Alleato"):
 		GruppoAvversario = "Nemico"
@@ -23,6 +25,7 @@ func _physics_process(delta: float) -> void:
 
 func prendiDanno(danno:int):
 	vita -= danno
+	preso_Danno.emit()
 	if vita<=0:
 		kill()
 

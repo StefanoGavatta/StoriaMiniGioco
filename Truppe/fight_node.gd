@@ -36,3 +36,9 @@ func abilita_combattimento():
 
 func disabilita_combattimento():
 	get_parent().is_fighting = false
+
+func abilita_radar():
+	RayCast.enabled = true
+
+func disabilita_radar():
+	RayCast.enabled = false
