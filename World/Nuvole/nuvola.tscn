@@ -3,9 +3,11 @@
 [ext_resource type="Script" path="res://World/Nuvole/nuvola.gd" id="1_uu0mw"]
 
 [node name="Nuvola" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.580392)
 script = ExtResource("1_uu0mw")
 
 [node name="AutoDistruzione" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 20.0
+autostart = true
 
 [connection signal="timeout" from="AutoDistruzione" to="." method="_on_auto_distruzione_timeout"]

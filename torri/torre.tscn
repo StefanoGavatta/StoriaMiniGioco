@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c7tlfmto5i3ql" path="res://torri/download-removebg-preview.png" id="2_gj2kt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4q6hr"]
-size = Vector2(45, 254)
+size = Vector2(113, 254)
 
 [node name="Torre" type="StaticBody2D"]
 script = ExtResource("1_1h6gk")
@@ -15,5 +15,5 @@ scale = Vector2(0.388315, 0.388315)
 texture = ExtResource("2_gj2kt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 1)
+position = Vector2(6.5, 1)
 shape = SubResource("RectangleShape2D_4q6hr")

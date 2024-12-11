@@ -1,8 +1,10 @@
+ParallaxLayer
+Marker2D
+ParallaxBackground
 TileMapLayer
 Sprite2D
 TextureRect
 Timer
-Marker2D
 Node2D
 Node
 Label
@@ -11,4 +13,3 @@ Control
 AnimationPlayer
 VSplitContainer
 VBoxContainer
-HBoxContainer

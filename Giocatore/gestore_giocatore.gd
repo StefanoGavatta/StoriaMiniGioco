@@ -30,5 +30,14 @@ func istanziaTruppa(tipoTruppa:String):
 	var posizioni = [$Posizionatore1,$Posizionatore2,$Posizionatore3]
 	var istanzaSpada = Spada.instantiate()
 	istanzaSpada.position = posizioni.pick_random().position
+	if istanzaSpada.position == $Posizionatore1.position:
+		istanzaSpada.z_index = 3
+	elif istanzaSpada.position == $Posizionatore2.position:
+		istanzaSpada.z_index = 2
+	elif istanzaSpada.position == $Posizionatore3.position:
+		istanzaSpada.z_index = 1
+		
+	if istanzaSpada.position == $Posizionatore3.position:
+		print("pos3")
 	istanzaSpada.add_to_group("Alleato")
 	get_parent().add_child(istanzaSpada)

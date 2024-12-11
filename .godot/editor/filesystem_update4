@@ -1,12 +1,9 @@
+res://Truppe/truppa.tscn
 res://World/world.tscn
 res://torri/torre.tscn
 res://UI/card.tscn
 res://UI/card_container.tscn
-res://Truppe/truppa.tscn
-res://Truppe/knockback.gd
-res://Truppe/fight_node.gd
-res://Truppe/truppa.gd
+res://World/Nuvole/nuvola.tscn
 res://Giocatore/gestore_giocatore.gd
 res://World/background.gd
-res://World/Nuvole/nuvola.tscn
-res://World/Nuvole/nuvola.gd
+res://torri/torre.gd
