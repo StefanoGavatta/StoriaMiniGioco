@@ -1,5 +1,6 @@
-Node
+AnimationPlayer
 AnimatedSprite2D
+Node
 Marker2D
 ParallaxLayer
 ParallaxBackground
@@ -11,4 +12,3 @@ Node2D
 Label
 Button
 Control
-AnimationPlayer

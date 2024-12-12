@@ -34,11 +34,11 @@ image = ExtResource("3_voegw")
 tipoCarta = "lancia"
 costo = 80
 
-[node name="Gigante" parent="." instance=ExtResource("1_lelfj")]
+[node name="Arco" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 688.0
 offset_top = 64.0
 offset_right = 688.0
 offset_bottom = 64.0
 image = ExtResource("4_qbffu")
-tipoCarta = "gigante"
+tipoCarta = "arco"
 costo = 130

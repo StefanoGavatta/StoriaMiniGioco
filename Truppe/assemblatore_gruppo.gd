@@ -30,18 +30,20 @@ func _ready() -> void:
 		truppa.set_collision_layer_value(7,true)
 		RayCast.set_collision_mask_value(8,true)
 	$"..".scale = Vector2(1.35,1.35)
-	elimina_animation(truppa.truppa_identità)
 	queue_free()
 	
-func elimina_animation(tipo_truppa:String):
+func elimina_animation(tipo_truppa:String)->AnimatedSprite2D:
 	match tipo_truppa:
 		"spada":
 			$"../Lancia".queue_free()
 			$"../Arco".queue_free()
+			return $"../Spada"
 		"lancia":
 			$"../Spada".queue_free()
 			$"../Arco".queue_free()
+			return $"../Lancia"
 		"arco":
 			$"../Spada".queue_free()
 			$"../Lancia".queue_free()
-			
+			return $"../Arco"
+	return null

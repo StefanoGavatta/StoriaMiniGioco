@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=17 format=4 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Script" path="res://World/background.gd" id="1_quvg8"]
 [ext_resource type="Texture2D" uid="uid://b28taoeklh0fc" path="res://BackGround/Background.png" id="2_6rcl3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dtvwo0n6mlyoj" path="res://Tileset/Tiles.png" id="3_vc68c"]
 [ext_resource type="Script" path="res://Giocatore/gestore_giocatore.gd" id="4_ppx6u"]
 [ext_resource type="PackedScene" uid="uid://dwygssc405sua" path="res://UI/card_container.tscn" id="5_k2s1r"]
+[ext_resource type="PackedScene" uid="uid://c4rhq25lvjkjr" path="res://Truppe/truppa.tscn" id="6_tbbqh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
 distance = 173.0
@@ -1964,7 +1965,7 @@ unique_name_in_owner = true
 script = ExtResource("4_ppx6u")
 
 [node name="ValutaTimer" type="Timer" parent="GestoreGiocatore"]
-wait_time = 0.1
+wait_time = 0.001
 autostart = true
 
 [node name="Posizionatore1" type="Marker2D" parent="GestoreGiocatore"]
@@ -2010,6 +2011,10 @@ offset_right = 1786.0
 offset_bottom = 960.0
 theme_override_font_sizes/font_size = 56
 text = "TEMPO"
+
+[node name="Truppa" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(1180, 676)
+"truppa_identità" = "lancia"
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]
