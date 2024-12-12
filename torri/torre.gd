@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func prendiDanno(danno:int):
 	vita -= danno
-	print(vita)
+
 	if vita <= 0:
 		esplodi()
 

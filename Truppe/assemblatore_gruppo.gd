@@ -12,6 +12,7 @@ extends Node
 @onready var truppa: CharacterBody2D = $".."
 
 func _ready() -> void:
+
 	truppa.GruppoAvversario.call()
 	if get_parent().is_in_group("Nemico"):
 		truppa.direction = Vector2(1,0)
@@ -27,5 +28,5 @@ func _ready() -> void:
 		Sprite.flip_h = false
 		truppa.set_collision_layer_value(7,true)
 		RayCast.set_collision_mask_value(8,true)
-		
+	$"..".scale = Vector2(1.35,1.35)
 	queue_free()

@@ -1965,7 +1965,7 @@ unique_name_in_owner = true
 script = ExtResource("4_ppx6u")
 
 [node name="ValutaTimer" type="Timer" parent="GestoreGiocatore"]
-wait_time = 0.001
+wait_time = 0.1
 autostart = true
 
 [node name="Posizionatore1" type="Marker2D" parent="GestoreGiocatore"]
@@ -2014,6 +2014,9 @@ offset_right = 1786.0
 offset_bottom = 960.0
 theme_override_font_sizes/font_size = 56
 text = "TEMPO"
+
+[node name="Truppa4" parent="." groups=["Nemico"] instance=ExtResource("5_6e0vr")]
+position = Vector2(445, 670)
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]

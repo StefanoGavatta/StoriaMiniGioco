@@ -1,5 +1,5 @@
-ParallaxLayer
 Marker2D
+ParallaxLayer
 ParallaxBackground
 TileMapLayer
 Sprite2D
@@ -12,4 +12,3 @@ Button
 Control
 AnimationPlayer
 VSplitContainer
-VBoxContainer

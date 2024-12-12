@@ -10,16 +10,15 @@
 size = Vector2(35, 91)
 
 [node name="Truppa" type="CharacterBody2D"]
-scale = Vector2(1.325, 1.325)
 collision_mask = 2
 script = ExtResource("1_27i6w")
 "velocità" = 5000
 metadata/_edit_group_ = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(21.015, -18.13)
-rotation = -3.14159
-target_position = Vector2(-17, 0)
+position = Vector2(20.545, -22.82)
+rotation = 3.14159
+target_position = Vector2(-15.582, -0.017)
 collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -49,10 +48,10 @@ one_shot = true
 script = ExtResource("4_nxlg3")
 
 [node name="PosizioneNemico" type="Marker2D" parent="AssemblatoreGruppo"]
-position = Vector2(26.91, -24)
+position = Vector2(20.545, -22.82)
 
 [node name="PosizioneAlleato" type="Marker2D" parent="AssemblatoreGruppo"]
-position = Vector2(-19.405, -22.38)
+position = Vector2(-15.36, -22.38)
 
 [connection signal="preso_Danno" from="." to="Knockback" method="_on_truppa_preso_danno"]
 [connection signal="timeout" from="FightNode/Timer" to="FightNode" method="attacca"]

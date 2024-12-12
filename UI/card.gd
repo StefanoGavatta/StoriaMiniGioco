@@ -19,7 +19,7 @@ func _on_buy_mouse_entered() -> void:
 	else:
 		await animation_player.animation_finished
 		animation_player.play("ingrandimento")
-
+		
 func _on_buy_mouse_exited() -> void:
 	if !animation_player.is_playing():
 		animation_player.play_backwards("ingrandimento")

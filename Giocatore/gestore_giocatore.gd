@@ -37,7 +37,5 @@ func istanziaTruppa(tipoTruppa:String):
 	elif istanzaSpada.position == $Posizionatore3.position:
 		istanzaSpada.z_index = 1
 		
-	if istanzaSpada.position == $Posizionatore3.position:
-		print("pos3")
 	istanzaSpada.add_to_group("Alleato")
 	get_parent().add_child(istanzaSpada)

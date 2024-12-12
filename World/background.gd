@@ -3,6 +3,7 @@ extends Node2D
 
 @onready var carica_nuova_nuvola: Timer = $Timer
 
+@export var velocita_scorrimento = 30
 const nuvola = preload("res://World/Nuvole/nuvola.tscn")
 
 const cloud1 = preload("res://BackGround/C2010.png")
@@ -13,7 +14,7 @@ const cloud4 = preload("res://BackGround/C2013.png")
 var immagini = [cloud1,cloud2,cloud3,cloud4]
 
 func _process(delta: float) -> void:
-	$ParallaxBackground.scroll_offset.x += 20*delta
+	$ParallaxBackground.scroll_offset.x += velocita_scorrimento*delta
 
 func crea_nuvola() -> void:
 	var nuova_nuvola = nuvola.instantiate()
