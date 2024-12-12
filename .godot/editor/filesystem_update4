@@ -1,9 +1,10 @@
-res://Truppe/truppa.tscn
 res://World/world.tscn
 res://torri/torre.tscn
+res://Truppe/truppa.tscn
 res://UI/card.tscn
 res://UI/card_container.tscn
 res://World/Nuvole/nuvola.tscn
+res://Truppe/assemblatore_gruppo.gd
 res://Giocatore/gestore_giocatore.gd
-res://World/background.gd
-res://torri/torre.gd
+res://Truppe/truppa.gd
+res://Truppe/animation_node.gd

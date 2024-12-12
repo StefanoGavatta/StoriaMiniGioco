@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var velocità: int = 1000
 @export var direction: Vector2 
 
+@export var truppa_identità: String
+
 var is_fighting: bool = false
 
 signal preso_Danno

@@ -29,6 +29,7 @@ func ControllaTruppa(card:Card)->bool:
 func istanziaTruppa(tipoTruppa:String):
 	var posizioni = [$Posizionatore1,$Posizionatore2,$Posizionatore3]
 	var istanzaSpada = Spada.instantiate()
+	istanzaSpada.truppa_identità = tipoTruppa
 	istanzaSpada.position = posizioni.pick_random().position
 	if istanzaSpada.position == $Posizionatore1.position:
 		istanzaSpada.z_index = 3

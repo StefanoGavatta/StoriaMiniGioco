@@ -22,7 +22,7 @@ offset_top = 64.0
 offset_right = 48.0
 offset_bottom = 64.0
 image = ExtResource("2_y888j")
-tipoCarta = "Spada"
+tipoCarta = "spada"
 costo = 50
 
 [node name="Lancia" parent="." instance=ExtResource("1_lelfj")]
@@ -31,7 +31,7 @@ offset_top = 64.0
 offset_right = 368.0
 offset_bottom = 64.0
 image = ExtResource("3_voegw")
-tipoCarta = "Lancia"
+tipoCarta = "lancia"
 costo = 80
 
 [node name="Gigante" parent="." instance=ExtResource("1_lelfj")]
@@ -40,5 +40,5 @@ offset_top = 64.0
 offset_right = 688.0
 offset_bottom = 64.0
 image = ExtResource("4_qbffu")
-tipoCarta = "Gigante"
+tipoCarta = "gigante"
 costo = 130
