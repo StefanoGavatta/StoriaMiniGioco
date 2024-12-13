@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=3 uid="uid://c4rhq25lvjkjr"]
+[gd_scene load_steps=113 format=3 uid="uid://c4rhq25lvjkjr"]
 
 [ext_resource type="Script" path="res://Truppe/truppa.gd" id="1_27i6w"]
 [ext_resource type="Script" path="res://Truppe/fight_node.gd" id="2_vx8hl"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Truppe/animation_node.gd" id="6_newwe"]
 [ext_resource type="Texture2D" uid="uid://twmv4fy856qs" path="res://AssetTruppe/Archer/Archer_Blue1.png" id="6_sfcrk"]
 [ext_resource type="Texture2D" uid="uid://b3wl2ghhp3uww" path="res://AssetTruppe/Archer/Archer_Red1.png" id="7_bnrux"]
+[ext_resource type="PackedScene" uid="uid://37oftey8ayhc" path="res://DannoRicevuto/danno_ricevuto.tscn" id="12_rwar5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nq3c8"]
 atlas = ExtResource("2_yj5f5")
@@ -157,7 +158,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_blu",
-"speed": 4.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -174,7 +175,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_red",
-"speed": 4.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -424,7 +425,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_blu",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -441,7 +442,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_red",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -691,7 +692,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_blu",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -708,7 +709,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_red",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -819,7 +820,7 @@ size = Vector2(35, 91)
 [node name="Truppa" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_27i6w")
-"velocità" = 5000
+"velocità" = 4000
 metadata/_edit_group_ = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -831,17 +832,17 @@ collision_mask = 0
 [node name="Spada" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.115, 1.7)
 sprite_frames = SubResource("SpriteFrames_4m731")
-animation = &"movement_blu"
+animation = &"attack_blu"
 
 [node name="Lancia" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_gtqpg")
-animation = &"movement_blu"
+animation = &"attack_red"
 
 [node name="Arco" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.115, 1.7)
 sprite_frames = SubResource("SpriteFrames_3j3ik")
-animation = &"movement_blu"
+animation = &"attack_red"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -21.5)
@@ -851,7 +852,7 @@ shape = SubResource("RectangleShape2D_nwkh4")
 script = ExtResource("2_vx8hl")
 
 [node name="Timer" type="Timer" parent="FightNode"]
-wait_time = 1.5
+wait_time = 1.2
 one_shot = true
 
 [node name="Knockback" type="Node" parent="."]
@@ -873,6 +874,13 @@ position = Vector2(20.545, -22.82)
 [node name="PosizioneAlleato" type="Marker2D" parent="AssemblatoreGruppo"]
 position = Vector2(-15.36, -22.38)
 
+[node name="DannoRicevuto" parent="." instance=ExtResource("12_rwar5")]
+offset_left = -19.97
+offset_top = -39.0
+offset_right = 20.03
+offset_bottom = -16.0
+
 [connection signal="death" from="." to="AnimationNode" method="_on_truppa_death"]
 [connection signal="preso_Danno" from="." to="Knockback" method="_on_truppa_preso_danno"]
+[connection signal="preso_Danno" from="." to="DannoRicevuto" method="preso_danno"]
 [connection signal="timeout" from="FightNode/Timer" to="FightNode" method="attacca"]

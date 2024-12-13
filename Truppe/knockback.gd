@@ -16,7 +16,7 @@ func KnockBack():
 	truppa.direction = -truppa.direction
 	fight_node.abilita_radar()
 
-func _on_truppa_preso_danno() -> void:
+func _on_truppa_preso_danno(danno:int) -> void:
 	contatore+=1
 	if contatore >= random_KnockBack_success:
 		KnockBack()

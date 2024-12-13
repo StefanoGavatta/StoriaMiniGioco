@@ -1,11 +1,13 @@
-res://Truppe/truppa.tscn
-res://Truppe/animation_node.gd
-res://Truppe/assemblatore_gruppo.gd
 res://World/world.tscn
 res://torri/torre.tscn
+res://Truppe/truppa.tscn
 res://UI/card.tscn
 res://UI/card_container.tscn
 res://World/Nuvole/nuvola.tscn
+res://Truppe/assemblatore_gruppo.gd
+res://DannoRicevuto/danno_ricevuto.tscn
+res://DannoRicevuto/danno_ricevuto.gd
 res://Truppe/truppa.gd
-res://Giocatore/gestore_giocatore.gd
+res://Truppe/knockback.gd
+res://Truppe/animation_node.gd
 res://Truppe/fight_node.gd

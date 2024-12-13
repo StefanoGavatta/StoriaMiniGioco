@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var vita: int = 30
 @export var danno: int = 10
-@export var velocità: int = 1000
+@export var velocità: int = 800
 @export var direction: Vector2 
 
 @export var truppa_identità: String
@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 
 func prendiDanno(danno:int):
 	vita -= danno
-	preso_Danno.emit()
+	preso_Danno.emit(danno)
 	if vita<=0:
 		kill()
 

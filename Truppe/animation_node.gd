@@ -29,7 +29,6 @@ func attacco_signal() -> void:
 	if not is_attacking && $"../RayCast2D".is_colliding() && truppa.can_move:
 		is_attacking = true
 		sprite.play(attacco)
-		print("playato attacco")
 		await sprite.animation_finished
 		is_attacking = false
 
