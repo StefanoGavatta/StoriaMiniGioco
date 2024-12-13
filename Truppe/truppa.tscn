@@ -1,6 +1,7 @@
-[gd_scene load_steps=113 format=3 uid="uid://c4rhq25lvjkjr"]
+[gd_scene load_steps=122 format=3 uid="uid://c4rhq25lvjkjr"]
 
 [ext_resource type="Script" path="res://Truppe/truppa.gd" id="1_27i6w"]
+[ext_resource type="Shader" uid="uid://ktmsuiqxkn0f" path="res://DannoRicevuto/hit_flash.tres" id="2_gvos4"]
 [ext_resource type="Script" path="res://Truppe/fight_node.gd" id="2_vx8hl"]
 [ext_resource type="Texture2D" uid="uid://b4wjm1bkctmta" path="res://AssetTruppe/SwordFighter/SwordFighter_LongHair_Blue1.png" id="2_yj5f5"]
 [ext_resource type="Texture2D" uid="uid://b8km5dtklxgrp" path="res://AssetTruppe/SwordFighter/SwordFighter_LongHair_Red1.png" id="3_g1qfm"]
@@ -12,6 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://twmv4fy856qs" path="res://AssetTruppe/Archer/Archer_Blue1.png" id="6_sfcrk"]
 [ext_resource type="Texture2D" uid="uid://b3wl2ghhp3uww" path="res://AssetTruppe/Archer/Archer_Red1.png" id="7_bnrux"]
 [ext_resource type="PackedScene" uid="uid://37oftey8ayhc" path="res://DannoRicevuto/danno_ricevuto.tscn" id="12_rwar5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tifbh"]
+shader = ExtResource("2_gvos4")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nq3c8"]
 atlas = ExtResource("2_yj5f5")
@@ -280,6 +286,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cynyn"]
+shader = ExtResource("2_gvos4")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pmv20"]
 atlas = ExtResource("4_vpih1")
 region = Rect2(0, 64, 32, 32)
@@ -546,6 +557,11 @@ animations = [{
 "name": &"movement_red",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wwogp"]
+shader = ExtResource("2_gvos4")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y0s0g"]
 atlas = ExtResource("6_sfcrk")
@@ -817,6 +833,102 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwkh4"]
 size = Vector2(35, 91)
 
+[sub_resource type="Animation" id="Animation_1awkh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lancia:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arco:material:shader_parameter/enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Spada:material:shader_parameter/enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_foifp"]
+resource_name = "hit_flash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spada:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_1stdb"]
+resource_name = "hit_flash"
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lancia:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.195708),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_a733t"]
+resource_name = "hit_flash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arco:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d1gwb"]
+_data = {
+"RESET": SubResource("Animation_1awkh"),
+"hit_flash_arco": SubResource("Animation_a733t"),
+"hit_flash_lancia": SubResource("Animation_1stdb"),
+"hit_flash_spada": SubResource("Animation_foifp")
+}
+
 [node name="Truppa" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_27i6w")
@@ -830,16 +942,19 @@ target_position = Vector2(-15.582, -0.017)
 collision_mask = 0
 
 [node name="Spada" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_tifbh")
 scale = Vector2(1.115, 1.7)
 sprite_frames = SubResource("SpriteFrames_4m731")
 animation = &"attack_blu"
 
 [node name="Lancia" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_cynyn")
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_gtqpg")
 animation = &"attack_red"
 
 [node name="Arco" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_wwogp")
 scale = Vector2(1.115, 1.7)
 sprite_frames = SubResource("SpriteFrames_3j3ik")
 animation = &"attack_red"
@@ -852,7 +967,7 @@ shape = SubResource("RectangleShape2D_nwkh4")
 script = ExtResource("2_vx8hl")
 
 [node name="Timer" type="Timer" parent="FightNode"]
-wait_time = 1.2
+wait_time = 0.9
 one_shot = true
 
 [node name="Knockback" type="Node" parent="."]
@@ -875,12 +990,18 @@ position = Vector2(20.545, -22.82)
 position = Vector2(-15.36, -22.38)
 
 [node name="DannoRicevuto" parent="." instance=ExtResource("12_rwar5")]
-offset_left = -19.97
-offset_top = -39.0
-offset_right = 20.03
-offset_bottom = -16.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d1gwb")
+}
 
 [connection signal="death" from="." to="AnimationNode" method="_on_truppa_death"]
 [connection signal="preso_Danno" from="." to="Knockback" method="_on_truppa_preso_danno"]
+[connection signal="preso_Danno" from="." to="AnimationNode" method="preso_danno"]
 [connection signal="preso_Danno" from="." to="DannoRicevuto" method="preso_danno"]
 [connection signal="timeout" from="FightNode/Timer" to="FightNode" method="attacca"]

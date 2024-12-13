@@ -2013,7 +2013,7 @@ theme_override_font_sizes/font_size = 56
 text = "TEMPO"
 
 [node name="Truppa" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
-position = Vector2(436, 662)
+position = Vector2(740, 666)
 "truppa_identità" = "spada"
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]

@@ -9,6 +9,7 @@ var death: String = "death_blu"
 var sprite: AnimatedSprite2D
 var is_attacking: bool = false
 
+var flash_da_utilizzare: String
 func _ready() -> void:
 	sprite = $"../AssemblatoreGruppo".elimina_animation(truppa.truppa_identità)
 	if truppa.is_in_group("Nemico"):
@@ -16,7 +17,8 @@ func _ready() -> void:
 		attacco = "attack_red"
 		idle = "idle_red"
 		death = "death_red"
-
+	flash_da_utilizzare = determina_flash()
+	
 func _process(delta: float) -> void:
 	# Solo gestisci l'animazione se non si sta già attaccando
 	if truppa.can_move && not is_attacking:
@@ -39,3 +41,20 @@ func _on_truppa_death() -> void:
 	sprite.play(death)
 	await sprite.animation_finished
 	truppa.queue_free()
+
+
+
+func preso_danno(danno:int) -> void:
+	$"../AnimationPlayer".play(flash_da_utilizzare)
+
+
+func determina_flash():
+	var TipoTruppa: String = truppa.truppa_identità
+	print(TipoTruppa)
+	match TipoTruppa:
+		"spada":
+			return "hit_flash_spada"
+		"lancia":
+			return "hit_flash_lancia"
+		"arco":
+			return "hit_flash_arco"
