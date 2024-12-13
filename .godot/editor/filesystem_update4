@@ -7,3 +7,4 @@ res://UI/card.tscn
 res://UI/card_container.tscn
 res://DannoRicevuto/danno_ricevuto.tscn
 res://Truppe/animation_node.gd
+res://Truppe/truppa.gd

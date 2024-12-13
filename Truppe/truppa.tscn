@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://37oftey8ayhc" path="res://DannoRicevuto/danno_ricevuto.tscn" id="12_rwar5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tifbh"]
+resource_local_to_scene = true
 shader = ExtResource("2_gvos4")
 shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
@@ -287,6 +288,7 @@ animations = [{
 }]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cynyn"]
+resource_local_to_scene = true
 shader = ExtResource("2_gvos4")
 shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
@@ -559,6 +561,7 @@ animations = [{
 }]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wwogp"]
+resource_local_to_scene = true
 shader = ExtResource("2_gvos4")
 shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
@@ -930,6 +933,9 @@ _data = {
 }
 
 [node name="Truppa" type="CharacterBody2D"]
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
 collision_mask = 2
 script = ExtResource("1_27i6w")
 "velocità" = 4000
