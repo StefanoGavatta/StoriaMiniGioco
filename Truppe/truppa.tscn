@@ -834,7 +834,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwkh4"]
-size = Vector2(35, 91)
+size = Vector2(35, 79)
 
 [sub_resource type="Animation" id="Animation_1awkh"]
 length = 0.001
@@ -966,7 +966,7 @@ sprite_frames = SubResource("SpriteFrames_3j3ik")
 animation = &"attack_red"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -21.5)
+position = Vector2(2.5, -27.5)
 shape = SubResource("RectangleShape2D_nwkh4")
 
 [node name="FightNode" type="Node" parent="."]

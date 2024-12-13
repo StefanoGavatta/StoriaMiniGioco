@@ -37,7 +37,8 @@ func attacco_signal() -> void:
 
 func _on_truppa_death() -> void:
 	truppa.can_move = false
-	$"../CollisionShape2D".queue_free()
+	if is_instance_valid($"../CollisionShape2D"):
+		$"../CollisionShape2D".queue_free()
 	sprite.play(death)
 	await sprite.animation_finished
 	truppa.queue_free()

@@ -1969,13 +1969,13 @@ wait_time = 0.001
 autostart = true
 
 [node name="Posizionatore1" type="Marker2D" parent="GestoreGiocatore"]
-position = Vector2(1756, 688)
+position = Vector2(1762, 723)
 
 [node name="Posizionatore2" type="Marker2D" parent="GestoreGiocatore"]
-position = Vector2(1756, 666)
+position = Vector2(1759, 685)
 
 [node name="Posizionatore3" type="Marker2D" parent="GestoreGiocatore"]
-position = Vector2(1756, 645)
+position = Vector2(1759, 664)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -2013,7 +2013,43 @@ theme_override_font_sizes/font_size = 56
 text = "TEMPO"
 
 [node name="Truppa" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
-position = Vector2(740, 666)
+position = Vector2(377, 663)
+"truppa_identità" = "spada"
+
+[node name="Truppa2" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(455, 706)
+"truppa_identità" = "spada"
+
+[node name="Truppa3" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(286, 709)
+"truppa_identità" = "spada"
+
+[node name="Truppa4" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(407, 663)
+"truppa_identità" = "spada"
+
+[node name="Truppa5" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(474, 664)
+"truppa_identità" = "spada"
+
+[node name="Truppa6" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(407, 706)
+"truppa_identità" = "spada"
+
+[node name="Truppa7" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(366, 708)
+"truppa_identità" = "spada"
+
+[node name="Truppa8" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(339, 683)
+"truppa_identità" = "spada"
+
+[node name="Truppa9" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(306, 660)
+"truppa_identità" = "spada"
+
+[node name="Truppa10" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
+position = Vector2(434, 684)
 "truppa_identità" = "spada"
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
