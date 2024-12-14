@@ -89,10 +89,9 @@ _data = {
 }
 
 [node name="DannoRicevuto" type="Label"]
-offset_left = -20.0
-offset_top = -38.435
-offset_right = 20.0
-offset_bottom = -15.435
+z_index = 5
+offset_right = 40.0
+offset_bottom = 23.0
 theme_override_colors/font_color = Color(0.87451, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.192157)
 horizontal_alignment = 1
