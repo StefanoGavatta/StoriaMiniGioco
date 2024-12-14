@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+warnings/check_invalid_track_paths=false
+
 [application]
 
 config/name="StoriaMiniGioco"
@@ -27,6 +31,7 @@ Alleato="gruppo alleato"
 
 [gui]
 
+theme/custom_font="res://CardAssets/Minecraftchmc-dBlX.ttf"
 theme/default_font_multichannel_signed_distance_field=true
 
 [layer_names]

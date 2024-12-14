@@ -1,6 +1,7 @@
+TextureRect
+Sprite2D
 AnimationPlayer
 Marker2D
-Sprite2D
 Timer
 Label
 AnimatedSprite2D
@@ -8,7 +9,6 @@ Node
 ParallaxLayer
 ParallaxBackground
 TileMapLayer
-TextureRect
 Node2D
 Button
 Control

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=18 format=4 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Script" path="res://World/background.gd" id="1_quvg8"]
 [ext_resource type="Texture2D" uid="uid://b28taoeklh0fc" path="res://BackGround/Background.png" id="2_6rcl3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Giocatore/gestore_giocatore.gd" id="4_ppx6u"]
 [ext_resource type="PackedScene" uid="uid://dwygssc405sua" path="res://UI/card_container.tscn" id="5_k2s1r"]
 [ext_resource type="PackedScene" uid="uid://c4rhq25lvjkjr" path="res://Truppe/truppa.tscn" id="6_tbbqh"]
+[ext_resource type="FontFile" uid="uid://dmvwrc225nj11" path="res://CardAssets/Minecraftchmc-dBlX.ttf" id="7_5ld53"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
 distance = 173.0
@@ -1978,6 +1979,7 @@ position = Vector2(1759, 685)
 position = Vector2(1759, 664)
 
 [node name="UI" type="Control" parent="."]
+z_index = 6
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -1992,23 +1994,25 @@ metadata/_edit_lock_ = true
 
 [node name="CardContainer" parent="UI" instance=ExtResource("5_k2s1r")]
 layout_mode = 1
-anchor_left = 0.489
-anchor_top = 0.991
-anchor_right = 0.489
-anchor_bottom = 0.991
-offset_left = -472.347
-offset_top = -346.289
-offset_right = 471.653
-offset_bottom = -0.289063
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -472.0
+offset_top = -346.0
+offset_right = 472.0
+offset_bottom = 0.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [node name="Label" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 1589.0
-offset_top = 881.0
-offset_right = 1786.0
-offset_bottom = 960.0
+offset_left = 1476.0
+offset_top = 885.0
+offset_right = 1589.0
+offset_bottom = 964.0
+theme_override_fonts/font = ExtResource("7_5ld53")
 theme_override_font_sizes/font_size = 56
 text = "TEMPO"
 

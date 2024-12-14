@@ -6,7 +6,11 @@ extends Node
 @onready var fight_node: Node = $"../FightNode"
 
 var contatore = 0
-var random_KnockBack_success = randi_range(3,8)
+@export var min_knockBack = 1
+@export var max_knockBack = 4
+
+var random_KnockBack_success = randi_range(min_knockBack,max_knockBack)
+
 func KnockBack():
 	fight_node.disabilita_combattimento()
 	fight_node.disabilita_radar()
@@ -20,5 +24,5 @@ func _on_truppa_preso_danno(danno:int) -> void:
 	contatore+=1
 	if contatore >= random_KnockBack_success:
 		KnockBack()
-		random_KnockBack_success = randi_range(2,5)
+		random_KnockBack_success = randi_range(min_knockBack,max_knockBack)
 		contatore = 0

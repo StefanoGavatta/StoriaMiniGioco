@@ -10,7 +10,7 @@ class_name Card
 @onready var GestoreGiocatore:Node = get_parent().get_parent().get_parent().get_node("%GestoreGiocatore")
 
 func _ready() -> void:
-	$TextureRect.texture = image
+	#$TextureRect.texture = image  #Riaggiungere una volta terminato
 	$TextureRect/Costo.text = str(costo)
 
 func _on_buy_mouse_entered() -> void:
