@@ -10,9 +10,12 @@ func _ready() -> void:
 
 func prendiDanno(danno:int):
 	vita -= danno
-
+	aggiornaVita()
 	if vita <= 0:
 		esplodi()
 
 func esplodi():
 	queue_free()
+
+func aggiornaVita():
+	$vita.text = str(vita) +"/"+ str(10000000)

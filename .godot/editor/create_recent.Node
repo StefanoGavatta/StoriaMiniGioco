@@ -1,9 +1,10 @@
+Label
+VisibleOnScreenNotifier2D
 TextureRect
 Sprite2D
 AnimationPlayer
 Marker2D
 Timer
-Label
 AnimatedSprite2D
 Node
 ParallaxLayer
@@ -11,4 +12,3 @@ ParallaxBackground
 TileMapLayer
 Node2D
 Button
-Control

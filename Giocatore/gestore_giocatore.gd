@@ -4,8 +4,10 @@ extends Node
 
 const Spada = preload("res://Truppe/truppa.tscn")
 
-var valuta: int= 0
-var capacity: int = 150
+var valuta: int= 9999999999999999
+@export var capacity: int = 150
+
+var istanzeCreate = 0
 
 func _on_valuta_timer_timeout() -> void:
 	if valuta<capacity:
@@ -41,3 +43,5 @@ func istanziaTruppa(tipoTruppa:String):
 		
 	
 	get_parent().add_child(istanzaSpada)
+	istanzeCreate += 1
+	$"../IstanzeCreate".text = str(istanzeCreate)

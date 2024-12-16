@@ -1964,6 +1964,7 @@ collision_layer = 65
 [node name="GestoreGiocatore" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("4_ppx6u")
+capacity = 999999999999999
 
 [node name="ValutaTimer" type="Timer" parent="GestoreGiocatore"]
 wait_time = 0.001
@@ -2055,6 +2056,12 @@ position = Vector2(306, 660)
 [node name="Truppa10" parent="." groups=["Nemico"] instance=ExtResource("6_tbbqh")]
 position = Vector2(434, 684)
 "truppa_identità" = "spada"
+
+[node name="IstanzeCreate" type="Label" parent="."]
+offset_left = 898.0
+offset_top = 764.0
+offset_right = 938.0
+offset_bottom = 778.0
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]

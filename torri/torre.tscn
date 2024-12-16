@@ -17,3 +17,11 @@ texture = ExtResource("2_gj2kt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.5, 1)
 shape = SubResource("RectangleShape2D_4q6hr")
+
+[node name="vita" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -157.0
+offset_right = 20.0
+offset_bottom = -143.0
+text = "Vita"
+horizontal_alignment = 1

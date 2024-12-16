@@ -17,8 +17,9 @@ func KnockBack():
 	knock_back.start()
 	truppa.direction = -truppa.direction
 	await knock_back.timeout
-	truppa.direction = -truppa.direction
 	fight_node.abilita_radar()
+	truppa.direction = -truppa.direction
+	
 
 func _on_truppa_preso_danno(danno:int) -> void:
 	contatore+=1
