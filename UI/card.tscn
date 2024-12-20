@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dg3a2aq0axjau"]
+[gd_scene load_steps=12 format=3 uid="uid://dg3a2aq0axjau"]
 
 [ext_resource type="Script" path="res://UI/card.gd" id="1_qsvci"]
 [ext_resource type="Texture2D" uid="uid://rwuyeghxdeq2" path="res://BackGround/carta.png" id="2_wb5ef"]
-[ext_resource type="Texture2D" uid="uid://b4wjm1bkctmta" path="res://AssetTruppe/SwordFighter/SwordFighter_LongHair_Blue1.png" id="3_33f66"]
+[ext_resource type="Texture2D" uid="uid://b50tl64iovujs" path="res://CardAssets/spadacartaimage.png" id="3_ouhk3"]
 [ext_resource type="Texture2D" uid="uid://5pgkqloflvvo" path="res://CardAssets/pixelcardassest_v02.png" id="4_vkaa6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40iw4"]
@@ -81,9 +81,27 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.1, 1.1)]
 }
 
+[sub_resource type="Animation" id="Animation_qcptq"]
+resource_name = "comprato"
+length = 0.13
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.13),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(0.965, 0.965), Vector2(1.1, 1.1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lk54e"]
 _data = {
 "RESET": SubResource("Animation_0qm5j"),
+"comprato": SubResource("Animation_qcptq"),
 "fondiEsauriti": SubResource("Animation_54txm"),
 "ingrandimento": SubResource("Animation_nw0k8")
 }
@@ -159,12 +177,12 @@ anchors_preset = 0
 [node name="image" type="TextureRect" parent="TextureRect/Label/Immagini"]
 z_index = 4
 layout_mode = 0
-offset_left = 76.0
-offset_top = 52.0
-offset_right = 90.0
-offset_bottom = 63.0
+offset_left = 79.0
+offset_top = 43.0
+offset_right = 92.0
+offset_bottom = 61.0
 scale = Vector2(2.57727, 2.7)
-texture = ExtResource("3_33f66")
+texture = ExtResource("3_ouhk3")
 expand_mode = 4
 
 [node name="VitaIcon" type="Sprite2D" parent="TextureRect/Label/Immagini"]

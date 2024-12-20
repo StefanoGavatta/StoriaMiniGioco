@@ -21,8 +21,8 @@ image = ExtResource("2_ujxwg")
 tipoCarta = "spada"
 costo = 50
 vita = 100
-attacco = 10
-speed = 10
+danno = 10
+speed = 5000
 
 [node name="Lancia" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 352.0
@@ -33,8 +33,8 @@ image = ExtResource("3_8174j")
 tipoCarta = "lancia"
 costo = 80
 vita = 80
-attacco = 12
-speed = 4
+danno = 12
+speed = 3000
 
 [node name="Arco" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 640.0
@@ -45,5 +45,5 @@ image = ExtResource("4_fixsm")
 tipoCarta = "arco"
 costo = 130
 vita = 30
-attacco = 8
-speed = 6
+danno = 8
+speed = 4000

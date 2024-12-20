@@ -6,3 +6,5 @@ res://UI/card.tscn
 res://UI/card_container.tscn
 res://DannoRicevuto/danno_ricevuto.tscn
 res://World/Nuvole/nuvola.tscn
+res://UI/card.gd
+res://Giocatore/gestore_giocatore.gd

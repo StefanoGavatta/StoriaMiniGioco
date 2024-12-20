@@ -5,7 +5,7 @@ extends Node
 const Spada = preload("res://Truppe/truppa.tscn")
 
 var valuta: int= 9999999999999999
-@export var capacity: int = 150
+@export var capacity: int = 9999999999999999
 
 var istanzeCreate = 0
 
@@ -21,18 +21,24 @@ func aggiornaValore():
 func ControllaTruppa(card:Card)->bool:
 	if card.costo < valuta:
 		valuta -= card.costo
-		istanziaTruppa(card.tipoCarta)
+		istanziaTruppa(card)
 		aggiornaValore()
 		return true
 	else:
 		return false
 		#fai qualche effetto strano
 
-func istanziaTruppa(tipoTruppa:String):
+func istanziaTruppa(card:Card):
 	var posizioni = [$Posizionatore1,$Posizionatore2,$Posizionatore3]
 	var istanzaSpada = Spada.instantiate()
 	istanzaSpada.add_to_group("Alleato")
-	istanzaSpada.truppa_identità = tipoTruppa
+	
+	istanzaSpada.truppa_identità = card.tipoCarta
+	istanzaSpada.vita = card.vita
+	print(card.vita)
+	istanzaSpada.danno = card.danno
+	istanzaSpada.velocità = card.speed
+	
 	istanzaSpada.position = posizioni.pick_random().position
 	if istanzaSpada.position == $Posizionatore1.position:
 		istanzaSpada.z_index = 3

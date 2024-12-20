@@ -9,7 +9,7 @@ class_name Card
 @export var costo: int
 
 @export var vita: int
-@export var attacco: int
+@export var danno: int
 @export var speed: int
 
 @onready var GestoreGiocatore:Node = get_parent().get_parent().get_parent().get_node("%GestoreGiocatore")
@@ -17,9 +17,10 @@ func _ready() -> void:
 	#$TextureRect.texture = image  #Riaggiungere una volta terminato
 	$TextureRect/Label/Costo.text = str(costo)
 	$TextureRect/Label/Vita.text = str(vita)
-	$TextureRect/Label/Attacco.text = str(attacco-2)+"~"+str(attacco+2)
-	$"TextureRect/Label/Velocità".text = str(speed)
+	$TextureRect/Label/Attacco.text = str(danno-2)+"~"+str(danno+2)
+	$"TextureRect/Label/Velocità".text = str(speed/100)
 	$TextureRect/Label/Immagini/image.texture = image
+	
 func _on_buy_mouse_entered() -> void:
 	if !animation_player.is_playing():
 		animation_player.play("ingrandimento")
@@ -37,5 +38,7 @@ func _on_buy_mouse_exited() -> void:
 
 func _on_buy_pressed() -> void:
 	var animazione = GestoreGiocatore.ControllaTruppa(self)
-	if !animazione:
+	if animazione:
+		animation_player.play("comprato")
+	else:
 		animation_player.play("fondiEsauriti") 
