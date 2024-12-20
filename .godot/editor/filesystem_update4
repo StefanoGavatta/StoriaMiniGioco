@@ -8,3 +8,7 @@ res://DannoRicevuto/danno_ricevuto.tscn
 res://World/Nuvole/nuvola.tscn
 res://UI/card.gd
 res://Giocatore/gestore_giocatore.gd
+res://monete/coin.tscn
+res://monete/coin.gd
+res://monete/auto_distruzione.gd
+res://monete/generatore_monete.gd

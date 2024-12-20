@@ -11,9 +11,14 @@ var istanzeCreate = 0
 
 func _on_valuta_timer_timeout() -> void:
 	if valuta<capacity:
-		valuta+=1
-		aggiornaValore()
+		aggiungi_valuta(1)
+
 		
+func aggiungi_valuta(quantita: int):
+	valuta+=quantita
+	aggiornaValore()
+
+
 func aggiornaValore():
 	$"../UI/Label".text = str(valuta)
 

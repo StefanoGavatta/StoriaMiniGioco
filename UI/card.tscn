@@ -210,6 +210,7 @@ region_rect = Rect2(402, 240, 18, 17)
 layout_mode = 1
 offset_right = 184.0
 offset_bottom = 232.0
+mouse_default_cursor_shape = 3
 theme_override_styles/focus = SubResource("StyleBoxEmpty_40iw4")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_teais")
 flat = true
