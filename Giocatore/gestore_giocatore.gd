@@ -1,16 +1,16 @@
-@icon("res://IconGodotNode/node_2D/icon_coin.png")
+@icon("res://IconGodotNode/node_2D/icon_hammer.png")
 
 extends Node
 
 const Spada = preload("res://Truppe/truppa.tscn")
 
-var valuta: int= 9999999999999999
-@export var capacity: int = 9999999999999999
+var valuta: int= 999999999
+var capacity: int = 150
 
 var istanzeCreate = 0
 
 func _on_valuta_timer_timeout() -> void:
-	if valuta<capacity:
+	if valuta < capacity:
 		aggiungi_valuta(1)
 
 		
@@ -20,7 +20,7 @@ func aggiungi_valuta(quantita: int):
 
 
 func aggiornaValore():
-	$"../UI/Label".text = str(valuta)
+	$"../UI/Label".text = str(valuta) + "/" + str(capacity)
 
 
 func ControllaTruppa(card:Card)->bool:
@@ -40,7 +40,6 @@ func istanziaTruppa(card:Card):
 	
 	istanzaSpada.truppa_identità = card.tipoCarta
 	istanzaSpada.vita = card.vita
-	print(card.vita)
 	istanzaSpada.danno = card.danno
 	istanzaSpada.velocità = card.speed
 	
@@ -54,5 +53,11 @@ func istanziaTruppa(card:Card):
 		
 	
 	get_parent().add_child(istanzaSpada)
-	istanzeCreate += 1
-	$"../IstanzeCreate".text = str(istanzeCreate)
+
+func upgrade_capacity():
+	capacity += 50
+	aggiornaValore()
+	
+func upgrade_production():
+	$ValutaTimer.wait_time -= 0.1
+	aggiornaValore()

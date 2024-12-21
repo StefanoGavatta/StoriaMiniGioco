@@ -12,7 +12,6 @@ extends Node
 func _physics_process(delta: float) -> void:
 	#abilitatore di combattimento
 	if RayCast.is_colliding() && !get_parent().is_fighting:
-		print("smashhh")
 		abilita_combattimento() #imposta la truppa in modalità combattimento
 		$"../AnimationNode".attacco_signal() #effettua un primo attacco senza delay
 		abilitaTimer() #abilita i successivi attacchi con delay

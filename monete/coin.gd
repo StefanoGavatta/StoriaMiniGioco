@@ -24,5 +24,5 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	$AutoDistruzione.queue_free()
 	$Button.queue_free()
-	speed = 1000
+	speed = 2500
 	moneta_raccolta = true

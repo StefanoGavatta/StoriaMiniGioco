@@ -6,8 +6,8 @@ extends Node
 @onready var fight_node: Node = $"../FightNode"
 
 var contatore = 0
-@export var min_knockBack = 1
-@export var max_knockBack = 4
+@export var min_knockBack = 3
+@export var max_knockBack = 6
 
 var random_KnockBack_success = randi_range(min_knockBack,max_knockBack)
 

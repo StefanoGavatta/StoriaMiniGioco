@@ -438,7 +438,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_blu",
-"speed": 12.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -455,7 +455,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_red",
-"speed": 12.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -711,7 +711,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_blu",
-"speed": 12.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -728,7 +728,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_red",
-"speed": 12.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -965,7 +965,7 @@ animation = &"attack_red"
 material = SubResource("ShaderMaterial_wwogp")
 scale = Vector2(1.115, 1.7)
 sprite_frames = SubResource("SpriteFrames_3j3ik")
-animation = &"attack_red"
+animation = &"attack_blu"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -27.5)

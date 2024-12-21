@@ -51,7 +51,6 @@ func preso_danno(danno:int) -> void:
 
 func determina_flash():
 	var TipoTruppa: String = truppa.truppa_identità
-	print(TipoTruppa)
 	match TipoTruppa:
 		"spada":
 			return "hit_flash_spada"

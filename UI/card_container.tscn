@@ -22,7 +22,7 @@ tipoCarta = "spada"
 costo = 50
 vita = 100
 danno = 10
-speed = 5000
+speed = 4000
 
 [node name="Lancia" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 352.0
@@ -34,7 +34,7 @@ tipoCarta = "lancia"
 costo = 80
 vita = 80
 danno = 12
-speed = 3000
+speed = 2000
 
 [node name="Arco" parent="." instance=ExtResource("1_lelfj")]
 offset_left = 640.0
@@ -46,4 +46,4 @@ tipoCarta = "arco"
 costo = 130
 vita = 30
 danno = 8
-speed = 4000
+speed = 3000
