@@ -21,7 +21,7 @@ image = ExtResource("2_ujxwg")
 tipoCarta = "spada"
 costo = 50
 vita = 90
-danno = 10
+danno = 8
 speed = 4000
 
 [node name="Lancia" parent="." instance=ExtResource("1_lelfj")]
@@ -45,5 +45,5 @@ image = ExtResource("4_fixsm")
 tipoCarta = "arco"
 costo = 130
 vita = 30
-danno = 8
+danno = 5
 speed = 3000

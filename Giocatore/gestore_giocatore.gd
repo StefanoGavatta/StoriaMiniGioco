@@ -4,7 +4,7 @@ extends Node
 
 const Spada = preload("res://Truppe/truppa.tscn")
 
-var valuta: int= 0
+var valuta: int= 50
 var capacity: int = 150
 
 var istanzeCreate = 0

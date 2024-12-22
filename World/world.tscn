@@ -2219,6 +2219,7 @@ position = Vector2(271, 67.75)
 scale = Vector2(4.31944, 4.31944)
 sprite_frames = SubResource("SpriteFrames_1dnkh")
 frame = 1
+frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Miglioramenti"]
 libraries = {

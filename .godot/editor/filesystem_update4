@@ -7,4 +7,5 @@ res://UI/card_container.tscn
 res://DannoRicevuto/danno_ricevuto.tscn
 res://World/Nuvole/nuvola.tscn
 res://monete/coin.tscn
-res://UI/miglioramenti.gd
+res://Truppe/nodo_arco.gd
+res://Truppe/knockback.gd

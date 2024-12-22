@@ -1,7 +1,7 @@
 extends Control
 
-var next_upgrade_capacity = 100
-var next_upgrade_production = 100
+var next_upgrade_capacity = 75
+var next_upgrade_production = 75
 
 @onready var gestore_giocatore: Node = %GestoreGiocatore
 
@@ -21,7 +21,7 @@ func _on_capacity_pressed() -> void:
 		$AnimationPlayer.play("CapacityFondiIns")
 func _on_production_pressed() -> void:
 	if gestore_giocatore.valuta >= next_upgrade_production:
-
+		$UpgradeButton.play("default")
 		if $"../../GestoreGiocatore/ValutaTimer".wait_time >= 0.2:
 			gestore_giocatore.valuta -= next_upgrade_production
 			gestore_giocatore.upgrade_production()
@@ -32,7 +32,7 @@ func _on_production_pressed() -> void:
 			gestore_giocatore.valuta -= next_upgrade_production
 			next_upgrade_production = 0
 			aggiorna_labels()
-		$UpgradeButton.play("default")
+		
 	else:
 		$AnimationPlayer.play("ProductionFondiIns")
 		

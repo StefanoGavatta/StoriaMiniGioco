@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=3 uid="uid://c4rhq25lvjkjr"]
+[gd_scene load_steps=122 format=3 uid="uid://c4rhq25lvjkjr"]
 
 [ext_resource type="Script" path="res://Truppe/truppa.gd" id="1_27i6w"]
 [ext_resource type="Shader" uid="uid://ktmsuiqxkn0f" path="res://DannoRicevuto/hit_flash.tres" id="2_gvos4"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Truppe/animation_node.gd" id="6_newwe"]
 [ext_resource type="Texture2D" uid="uid://twmv4fy856qs" path="res://AssetTruppe/Archer/Archer_Blue1.png" id="6_sfcrk"]
 [ext_resource type="Texture2D" uid="uid://b3wl2ghhp3uww" path="res://AssetTruppe/Archer/Archer_Red1.png" id="7_bnrux"]
+[ext_resource type="Script" path="res://Truppe/nodo_arco.gd" id="13_solwb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tifbh"]
 resource_local_to_scene = true
@@ -1000,6 +1001,9 @@ position = Vector2(-15.36, -22.38)
 libraries = {
 "": SubResource("AnimationLibrary_d1gwb")
 }
+
+[node name="NodoArco" type="Node" parent="."]
+script = ExtResource("13_solwb")
 
 [connection signal="death" from="." to="AnimationNode" method="_on_truppa_death"]
 [connection signal="preso_Danno" from="." to="Knockback" method="_on_truppa_preso_danno"]
