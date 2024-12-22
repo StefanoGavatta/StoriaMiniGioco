@@ -32,7 +32,7 @@ offset_bottom = 64.0
 image = ExtResource("3_8174j")
 tipoCarta = "lancia"
 costo = 80
-vita = 150
+vita = 125
 danno = 12
 speed = 2000
 
@@ -43,7 +43,7 @@ offset_right = 640.0
 offset_bottom = 64.0
 image = ExtResource("4_fixsm")
 tipoCarta = "arco"
-costo = 130
+costo = 70
 vita = 30
 danno = 5
 speed = 3000

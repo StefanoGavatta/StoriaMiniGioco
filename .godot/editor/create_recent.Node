@@ -1,11 +1,11 @@
+Timer
+Label
+Control
 Node
 AnimatedSprite2D
 AnimationPlayer
-Label
-Control
 Marker2D
 Button
-Timer
 Sprite2D
 StaticBody2D
 TextureRect

@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=56 format=4 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Script" path="res://World/background.gd" id="1_quvg8"]
 [ext_resource type="Texture2D" uid="uid://b28taoeklh0fc" path="res://BackGround/Background.png" id="2_6rcl3"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://dmvwrc225nj11" path="res://CardAssets/Minecraftchmc-dBlX.ttf" id="7_5ld53"]
 [ext_resource type="Script" path="res://UI/miglioramenti.gd" id="10_vk5v5"]
 [ext_resource type="Texture2D" uid="uid://cqrkx5cbx1j17" path="res://CardAssets/PBP-V2.png" id="11_k6dol"]
+[ext_resource type="Script" path="res://LanPartyReq/lan_party_node.gd" id="12_bx3a8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
 distance = 173.0
@@ -2051,6 +2052,14 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lh4r4"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvdml"]
+bg_color = Color(0.25069, 0.417258, 0.537421, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing_size = 4.915
+
 [node name="World" type="Node2D"]
 metadata/_edit_lock_ = true
 
@@ -2141,7 +2150,7 @@ position = Vector2(1760, 664)
 script = ExtResource("6_dkahq")
 
 [node name="Timer" type="Timer" parent="GestoreNemici"]
-wait_time = 5.0
+wait_time = 7.5
 autostart = true
 
 [node name="Posizionatore1" type="Marker2D" parent="GestoreNemici"]
@@ -2329,9 +2338,39 @@ text = "Production"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="LanPartyNode" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 124.0
+script = ExtResource("12_bx3a8")
+
+[node name="Tempo" type="Label" parent="LanPartyNode"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -19.5
+offset_right = 55.5
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fvdml")
+text = "TIME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="LanPartyNode/Tempo"]
+autostart = true
+
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]
 [connection signal="timeout" from="GestoreNemici/Timer" to="GestoreNemici" method="_on_timer_timeout"]
 [connection signal="timeout" from="GeneratoreMonete/Timer" to="GeneratoreMonete" method="_on_timer_timeout"]
 [connection signal="pressed" from="UI/Miglioramenti/Capacity" to="UI/Miglioramenti" method="_on_capacity_pressed"]
 [connection signal="pressed" from="UI/Miglioramenti/Production" to="UI/Miglioramenti" method="_on_production_pressed"]
+[connection signal="timeout" from="LanPartyNode/Tempo/Timer" to="LanPartyNode" method="_on_timer_timeout"]

@@ -8,14 +8,13 @@ const Spada = preload("res://Truppe/truppa.tscn")
 
 func _on_timer_timeout() -> void:
 	var carta = Card.new()
-	var truppa = randi_range(0,2)
-	match truppa:
-		0:
-			carta = card_container.get_node("Spada")
-		1:
-			carta = card_container.get_node("Lancia")
-		2:
-			carta = card_container.get_node("Arco")
+	var truppa = randi_range(0,10)
+	if truppa <= 5:
+		carta = card_container.get_node("Spada")
+	elif truppa >= 6 && truppa <= 7:
+		carta = card_container.get_node("Lancia")
+	elif  truppa >= 8:
+		carta = card_container.get_node("Arco")
 	
 	istanziaTruppa(carta)
 
@@ -31,11 +30,11 @@ func istanziaTruppa(card:Card):
 	
 	istanzaSpada.position = posizioni.pick_random().position
 	if istanzaSpada.position == $Posizionatore1.position:
-		istanzaSpada.z_index = 3
+		istanzaSpada.z_index = 1
 	elif istanzaSpada.position == $Posizionatore2.position:
 		istanzaSpada.z_index = 2
 	elif istanzaSpada.position == $Posizionatore3.position:
-		istanzaSpada.z_index = 1
+		istanzaSpada.z_index = 3
 		
 	
 	get_parent().add_child(istanzaSpada)

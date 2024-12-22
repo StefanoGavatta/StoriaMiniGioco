@@ -1,7 +1,7 @@
 @icon("res://IconGodotNode/node/icon_map.png")
 extends StaticBody2D
 
-var vita: int = 10000000
+var vita: int = 1
 var danno: int
 
 func _ready() -> void:
@@ -15,7 +15,8 @@ func prendiDanno(danno:int):
 		esplodi()
 
 func esplodi():
+	get_tree().paused = true
 	queue_free()
 
 func aggiornaVita():
-	$vita.text = str(vita) +"/"+ str(10000000)
+	$vita.text = str(vita) +"/"+ str(700)

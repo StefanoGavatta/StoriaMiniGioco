@@ -9,3 +9,6 @@ res://World/Nuvole/nuvola.tscn
 res://monete/coin.tscn
 res://Truppe/nodo_arco.gd
 res://Truppe/knockback.gd
+res://LanPartyReq/lan_party_node.gd
+res://World/gestore_nemici.gd
+res://torri/torre.gd
