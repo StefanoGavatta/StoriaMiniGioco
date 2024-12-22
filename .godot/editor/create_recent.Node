@@ -1,11 +1,11 @@
+AnimatedSprite2D
+AnimationPlayer
 Label
-Button
 Control
 Marker2D
+Button
 Timer
 Node
-AnimationPlayer
-AnimatedSprite2D
 Sprite2D
 StaticBody2D
 TextureRect

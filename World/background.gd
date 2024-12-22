@@ -13,6 +13,8 @@ const cloud4 = preload("res://BackGround/C2013.png")
 
 var immagini = [cloud1,cloud2,cloud3,cloud4]
 
+
+
 func _process(delta: float) -> void:
 	$ParallaxBackground.scroll_offset.x += velocita_scorrimento*delta
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=54 format=4 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Script" path="res://World/background.gd" id="1_quvg8"]
 [ext_resource type="Texture2D" uid="uid://b28taoeklh0fc" path="res://BackGround/Background.png" id="2_6rcl3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://monete/generatore_monete.gd" id="6_o4qje"]
 [ext_resource type="FontFile" uid="uid://dmvwrc225nj11" path="res://CardAssets/Minecraftchmc-dBlX.ttf" id="7_5ld53"]
 [ext_resource type="Script" path="res://UI/miglioramenti.gd" id="10_vk5v5"]
+[ext_resource type="Texture2D" uid="uid://cqrkx5cbx1j17" path="res://CardAssets/PBP-V2.png" id="11_k6dol"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
 distance = 173.0
@@ -1894,6 +1895,162 @@ texture = ExtResource("3_vc68c")
 [sub_resource type="TileSet" id="TileSet_ct27n"]
 sources/0 = SubResource("TileSetAtlasSource_fkxli")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwtlx"]
+atlas = ExtResource("11_k6dol")
+region = Rect2(158, 36, 48, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb5ch"]
+atlas = ExtResource("11_k6dol")
+region = Rect2(110, 36, 48, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hrtvg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwtlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb5ch")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp8u5"]
+atlas = ExtResource("11_k6dol")
+region = Rect2(158, 0, 48, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up14b"]
+atlas = ExtResource("11_k6dol")
+region = Rect2(110, 0, 48, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1dnkh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp8u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up14b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_eh352"]
+resource_name = "CapacityFondiIns"
+length = 0.31
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CapacityButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.0509804, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1wg5x"]
+resource_name = "ProductionFondiIns"
+length = 0.31
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UpgradeButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m2bjq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CapacityButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UpgradeButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8qb6w"]
+_data = {
+"CapacityFondiIns": SubResource("Animation_eh352"),
+"ProductionFondiIns": SubResource("Animation_1wg5x"),
+"RESET": SubResource("Animation_m2bjq")
+}
+
+[sub_resource type="Theme" id="Theme_vwx3l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1ill"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_54gfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_puu8f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y07i5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_igqwv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vy03n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2pedr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avph0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ofaht"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ou1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvkq3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmppa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xg5u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tg80j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsmja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ohsg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w2rm5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3a0b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2btb0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uonq6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5f4xl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lh4r4"]
+
 [node name="World" type="Node2D"]
 metadata/_edit_lock_ = true
 
@@ -2049,32 +2206,92 @@ offset_right = 465.0
 offset_bottom = 1017.0
 script = ExtResource("10_vk5v5")
 
+[node name="CapacityButton" type="AnimatedSprite2D" parent="UI/Miglioramenti"]
+position = Vector2(97, 85)
+scale = Vector2(4.31944, 4.31944)
+sprite_frames = SubResource("SpriteFrames_hrtvg")
+frame = 1
+frame_progress = 1.0
+
+[node name="UpgradeButton" type="AnimatedSprite2D" parent="UI/Miglioramenti"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(271, 67.75)
+scale = Vector2(4.31944, 4.31944)
+sprite_frames = SubResource("SpriteFrames_1dnkh")
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Miglioramenti"]
+libraries = {
+"": SubResource("AnimationLibrary_8qb6w")
+}
+
 [node name="Capacity" type="Button" parent="UI/Miglioramenti"]
-modulate = Color(0, 0, 1, 1)
 layout_mode = 0
-offset_left = 17.0
-offset_top = 29.0
-offset_right = 150.0
-offset_bottom = 162.0
-text = "Capacity"
+offset_left = 7.0
+offset_top = 59.0
+offset_right = 140.0
+offset_bottom = 121.0
+mouse_default_cursor_shape = 3
+theme = SubResource("Theme_vwx3l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o1ill")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_54gfi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_puu8f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_y07i5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_igqwv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_vy03n")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2pedr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_avph0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ofaht")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_0ou1r")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvkq3")
+flat = true
 
 [node name="costo" type="Label" parent="UI/Miglioramenti/Capacity"]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 83.0
-offset_right = 86.0
-offset_bottom = 97.0
+offset_left = 34.0
+offset_top = -52.0
+offset_right = 90.0
+offset_bottom = -24.0
+theme_override_colors/font_color = Color(0.917647, 0.839216, 0, 1)
+theme_override_font_sizes/font_size = 32
 text = "costo"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonScope" type="Label" parent="UI/Miglioramenti/Capacity"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.5
+offset_top = 7.0
+offset_right = 42.5
+offset_bottom = 35.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Capacity"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Production" type="Button" parent="UI/Miglioramenti"]
-modulate = Color(1, 0, 0, 1)
 layout_mode = 0
-offset_left = 185.0
-offset_top = 29.0
-offset_right = 318.0
-offset_bottom = 162.0
-text = "Production"
+offset_left = 183.0
+offset_top = 59.0
+offset_right = 312.0
+offset_bottom = 123.0
+mouse_default_cursor_shape = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fmppa")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5xg5u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tg80j")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_wsmja")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4ohsg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_w2rm5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y3a0b")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2btb0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uonq6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5f4xl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lh4r4")
+flat = true
 
 [node name="costo" type="Label" parent="UI/Miglioramenti/Production"]
 layout_mode = 1
@@ -2083,15 +2300,33 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -19.5
-offset_top = 16.5
-offset_right = 20.5
-offset_bottom = 30.5
+offset_left = -27.5
+offset_top = -84.0
+offset_right = 28.5
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.919241, 0.840636, 0, 1)
+theme_override_font_sizes/font_size = 32
 text = "costo
 "
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonScope" type="Label" parent="UI/Miglioramenti/Production"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.5
+offset_top = 7.0
+offset_right = 54.5
+offset_bottom = 35.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Production"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]

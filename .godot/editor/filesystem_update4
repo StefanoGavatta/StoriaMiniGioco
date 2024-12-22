@@ -1,6 +1,5 @@
 res://World/world.tscn
 res://DannoRicevuto/hit_flash.tres
-res://Giocatore/gestore_giocatore.gd
 res://torri/torre.tscn
 res://Truppe/truppa.tscn
 res://UI/card.tscn
@@ -9,6 +8,3 @@ res://DannoRicevuto/danno_ricevuto.tscn
 res://World/Nuvole/nuvola.tscn
 res://monete/coin.tscn
 res://UI/miglioramenti.gd
-res://Truppe/animation_node.gd
-res://Truppe/fight_node.gd
-res://World/gestore_nemici.gd

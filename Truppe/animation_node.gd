@@ -1,6 +1,8 @@
 @icon("res://IconGodotNode/node/icon_brush.png")
 extends Node
 
+const labelDanno = preload("res://DannoRicevuto/danno_ricevuto.tscn")
+
 @onready var truppa: CharacterBody2D = $".."
 var movimento: String = "movement_blu"
 var attacco: String = "attack_blu"
@@ -47,7 +49,7 @@ func _on_truppa_death() -> void:
 
 func preso_danno(danno:int) -> void:
 	$"../AnimationPlayer".play(flash_da_utilizzare)
-
+	istanzia_label(danno)
 
 func determina_flash():
 	var TipoTruppa: String = truppa.truppa_identità
@@ -58,3 +60,10 @@ func determina_flash():
 			return "hit_flash_lancia"
 		"arco":
 			return "hit_flash_arco"
+
+func istanzia_label(danno:int):
+	var labelIst = labelDanno.instantiate()
+	labelIst.get_node("Control").danno_ricevuto = danno
+	labelIst.position = Vector2(randf_range(truppa.position.x-20,truppa.position.x+20),randf_range(truppa.position.y-20,truppa.position.y+20))
+	add_child(labelIst)
+	
