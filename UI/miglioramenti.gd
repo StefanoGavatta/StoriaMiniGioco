@@ -15,17 +15,25 @@ func _on_capacity_pressed() -> void:
 		$CapacityButton.play("default")
 		gestore_giocatore.valuta -= next_upgrade_capacity
 		gestore_giocatore.upgrade_capacity()
+		
+		#Data : calcola la valuta totale spesa
+		$"../../Data".valuta_spesa += next_upgrade_capacity
+		
 		next_upgrade_capacity += 50
 		aggiorna_labels()
 	else:
 		$AnimationPlayer.play("CapacityFondiIns")
+		
 func _on_production_pressed() -> void:
 	if gestore_giocatore.valuta >= next_upgrade_production:
 		$UpgradeButton.play("default")
 		if $"../../GestoreGiocatore/ValutaTimer".wait_time >= 0.2:
 			gestore_giocatore.valuta -= next_upgrade_production
 			gestore_giocatore.upgrade_production()
-
+			
+			#Data : calcola la valuta totale spesa
+			$"../../Data".valuta_spesa += next_upgrade_production
+			
 			next_upgrade_production += 50
 			aggiorna_labels()
 		else:

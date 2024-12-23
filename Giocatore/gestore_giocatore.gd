@@ -21,7 +21,10 @@ func aggiungi_valuta(quantita: int):
 
 func aggiornaValore():
 	$"../UI/Label".text = str(valuta) + "/" + str(capacity)
-
+	
+	#Data : calcola il numero maggiore di valute raggiunto
+	if valuta > $"../Data".valuta_massima_raggiunta:
+		$"../Data".valuta_massima_raggiunta = valuta
 
 func ControllaTruppa(card:Card)->bool:
 	if card.costo < valuta:
@@ -53,7 +56,11 @@ func istanziaTruppa(card:Card):
 		
 	
 	get_parent().add_child(istanzaSpada)
-
+	
+	#Data : prende il numero di truppe
+	$"../Data".truppe_posizionate += 1
+	#Data : prende le spese totali
+	$"../Data".valuta_spesa += card.costo
 func upgrade_capacity():
 	capacity += 50
 	aggiornaValore()

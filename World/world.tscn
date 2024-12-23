@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=58 format=4 uid="uid://b8aa8q1x08m8"]
 
 [ext_resource type="Script" path="res://World/background.gd" id="1_quvg8"]
 [ext_resource type="Texture2D" uid="uid://b28taoeklh0fc" path="res://BackGround/Background.png" id="2_6rcl3"]
@@ -12,6 +12,8 @@
 [ext_resource type="Script" path="res://UI/miglioramenti.gd" id="10_vk5v5"]
 [ext_resource type="Texture2D" uid="uid://cqrkx5cbx1j17" path="res://CardAssets/PBP-V2.png" id="11_k6dol"]
 [ext_resource type="Script" path="res://LanPartyReq/lan_party_node.gd" id="12_bx3a8"]
+[ext_resource type="Script" path="res://RaccoltaDati/data.gd" id="13_0vk8h"]
+[ext_resource type="Script" path="res://RaccoltaDati/criptatore.gd" id="14_q65r8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l0w4d"]
 distance = 173.0
@@ -2119,13 +2121,13 @@ metadata/_edit_lock_ = true
 
 [node name="Torre3" parent="Torri" groups=["Nemico"] instance=ExtResource("2_wah31")]
 z_index = 4
-position = Vector2(154, 566)
+position = Vector2(149, 571)
 scale = Vector2(1.35, 1.35)
 collision_layer = 129
 
 [node name="Torre2" parent="Torri" groups=["Alleato"] instance=ExtResource("2_wah31")]
 z_index = 4
-position = Vector2(1749, 566)
+position = Vector2(1761, 567)
 scale = Vector2(1.35, 1.35)
 collision_layer = 65
 
@@ -2366,6 +2368,12 @@ vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="LanPartyNode/Tempo"]
 autostart = true
+
+[node name="Data" type="Node" parent="."]
+script = ExtResource("13_0vk8h")
+
+[node name="criptatore" type="Node" parent="Data"]
+script = ExtResource("14_q65r8")
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]

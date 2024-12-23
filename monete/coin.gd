@@ -26,3 +26,6 @@ func _on_button_pressed() -> void:
 	$Button.queue_free()
 	speed = 2500
 	moneta_raccolta = true
+	
+	#Data : indica le monete raccolte
+	get_parent().get_node("Data").monete_raccolte+=1
