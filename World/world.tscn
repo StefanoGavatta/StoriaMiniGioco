@@ -1998,7 +1998,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 0, 0, 1)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8qb6w"]
@@ -2168,7 +2168,7 @@ position = Vector2(168, 720)
 script = ExtResource("6_o4qje")
 
 [node name="Timer" type="Timer" parent="GeneratoreMonete"]
-wait_time = 1.3
+wait_time = 2.0
 autostart = true
 
 [node name="UI" type="Control" parent="."]
@@ -2225,7 +2225,6 @@ frame = 1
 frame_progress = 1.0
 
 [node name="UpgradeButton" type="AnimatedSprite2D" parent="UI/Miglioramenti"]
-modulate = Color(1, 0, 0, 1)
 position = Vector2(271, 67.75)
 scale = Vector2(4.31944, 4.31944)
 sprite_frames = SubResource("SpriteFrames_1dnkh")

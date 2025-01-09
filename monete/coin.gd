@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 		# Muoviamo la sprite verso il target
 		position += direction * speed * delta
 		
-		if position.distance_to(target_position) < 10:
+		if position.distance_to(target_position) < 30:
 			gestore_giocatore.aggiungi_valuta(10)
 			queue_free()
 

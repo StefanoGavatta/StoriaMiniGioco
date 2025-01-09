@@ -1,0 +1,13 @@
+res://World/world.tscn
+res://DannoRicevuto/hit_flash.tres
+res://torri/torre.tscn
+res://Truppe/truppa.tscn
+res://UI/card.tscn
+res://UI/card_container.tscn
+res://DannoRicevuto/danno_ricevuto.tscn
+res://World/Nuvole/nuvola.tscn
+res://monete/coin.tscn
+res://RaccoltaDati/encrypted.txt
+res://monete/coin.gd
+res://Truppe/fight_node.gd
+res://RaccoltaDati/dati.txt
