@@ -7,7 +7,6 @@ res://UI/card_container.tscn
 res://DannoRicevuto/danno_ricevuto.tscn
 res://World/Nuvole/nuvola.tscn
 res://monete/coin.tscn
+res://torri/torre.gd
 res://RaccoltaDati/encrypted.txt
-res://monete/coin.gd
-res://Truppe/fight_node.gd
-res://RaccoltaDati/dati.txt
+res://UI/miglioramenti.gd

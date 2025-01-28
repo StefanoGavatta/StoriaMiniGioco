@@ -2074,10 +2074,9 @@ script = ExtResource("1_quvg8")
 motion_mirroring = Vector2(2038, 0)
 
 [node name="BBImage" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer"]
-position = Vector2(955, 392)
+position = Vector2(1016, 384)
 scale = Vector2(4.24897, 4.24309)
 texture = ExtResource("2_6rcl3")
-metadata/_edit_lock_ = true
 
 [node name="Timer" type="Timer" parent="Background"]
 autostart = true
@@ -2121,13 +2120,13 @@ metadata/_edit_lock_ = true
 
 [node name="Torre3" parent="Torri" groups=["Nemico"] instance=ExtResource("2_wah31")]
 z_index = 4
-position = Vector2(149, 571)
+position = Vector2(128, 592)
 scale = Vector2(1.35, 1.35)
 collision_layer = 129
 
 [node name="Torre2" parent="Torri" groups=["Alleato"] instance=ExtResource("2_wah31")]
 z_index = 4
-position = Vector2(1761, 567)
+position = Vector2(1793, 592)
 scale = Vector2(1.35, 1.35)
 collision_layer = 65
 
@@ -2192,40 +2191,40 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -472.0
+offset_left = -444.0
 offset_top = -346.0
-offset_right = 472.0
+offset_right = 444.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Label" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 1476.0
+offset_left = 1608.0
 offset_top = 885.0
-offset_right = 1589.0
-offset_bottom = 964.0
+offset_right = 1721.0
+offset_bottom = 936.0
 theme_override_fonts/font = ExtResource("7_5ld53")
 theme_override_font_sizes/font_size = 56
 text = "TEMPO"
 
 [node name="Miglioramenti" type="Control" parent="UI"]
 anchors_preset = 0
-offset_left = 127.0
-offset_top = 819.0
-offset_right = 465.0
-offset_bottom = 1017.0
+offset_left = 64.0
+offset_top = 832.0
+offset_right = 402.0
+offset_bottom = 1030.0
 script = ExtResource("10_vk5v5")
 
 [node name="CapacityButton" type="AnimatedSprite2D" parent="UI/Miglioramenti"]
-position = Vector2(97, 85)
+position = Vector2(167.667, 21.7499)
 scale = Vector2(4.31944, 4.31944)
 sprite_frames = SubResource("SpriteFrames_hrtvg")
 frame = 1
 frame_progress = 1.0
 
 [node name="UpgradeButton" type="AnimatedSprite2D" parent="UI/Miglioramenti"]
-position = Vector2(271, 67.75)
+position = Vector2(167.667, 149.75)
 scale = Vector2(4.31944, 4.31944)
 sprite_frames = SubResource("SpriteFrames_1dnkh")
 frame = 1
@@ -2238,10 +2237,10 @@ libraries = {
 
 [node name="Capacity" type="Button" parent="UI/Miglioramenti"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 59.0
-offset_right = 140.0
-offset_bottom = 121.0
+offset_left = 77.6666
+offset_top = -4.25006
+offset_right = 210.667
+offset_bottom = 57.7499
 mouse_default_cursor_shape = 3
 theme = SubResource("Theme_vwx3l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o1ill")
@@ -2286,10 +2285,10 @@ vertical_alignment = 1
 
 [node name="Production" type="Button" parent="UI/Miglioramenti"]
 layout_mode = 0
-offset_left = 183.0
-offset_top = 59.0
-offset_right = 312.0
-offset_bottom = 123.0
+offset_left = 79.6666
+offset_top = 141.0
+offset_right = 208.667
+offset_bottom = 205.0
 mouse_default_cursor_shape = 3
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fmppa")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5xg5u")

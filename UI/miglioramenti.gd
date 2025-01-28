@@ -22,6 +22,8 @@ func _on_capacity_pressed() -> void:
 		next_upgrade_capacity += 50
 		aggiorna_labels()
 	else:
+		if $AnimationPlayer.is_playing():
+			await $AnimationPlayer.animation_finished
 		$AnimationPlayer.play("CapacityFondiIns")
 		
 func _on_production_pressed() -> void:
@@ -42,6 +44,8 @@ func _on_production_pressed() -> void:
 			aggiorna_labels()
 		
 	else:
+		if $AnimationPlayer.is_playing():
+			await $AnimationPlayer.animation_finished
 		$AnimationPlayer.play("ProductionFondiIns")
 		
 func aggiorna_labels():
