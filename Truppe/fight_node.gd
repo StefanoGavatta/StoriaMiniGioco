@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node/icon_sword.png")
+
 extends Node
 
 #nodo responsabile del combattimento della truppa.

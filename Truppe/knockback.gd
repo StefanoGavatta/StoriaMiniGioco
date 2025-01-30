@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node/icon_target_2.png")
+
 extends Node
 
 @onready var knock_back: Timer = $KnockBack

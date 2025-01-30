@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node_2D/icon_coin.png")
+
 extends AnimatedSprite2D
 
 var moneta_raccolta: bool = false
@@ -6,7 +6,7 @@ var speed: int = 110
 
 @onready var gestore_giocatore: Node = get_parent().get_node("%GestoreGiocatore")
 
-var target_position: Vector2 = Vector2(1476, 885) # Cambia questi valori con la posizione desiderata
+var target_position: Vector2 = Vector2(1021, 522) # Cambia questi valori con la posizione desiderata
 
 func _process(delta: float) -> void:
 	if !moneta_raccolta:
@@ -24,8 +24,6 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	$AutoDistruzione.queue_free()
 	$Button.queue_free()
-	speed = 2500
+	speed = 2000
 	moneta_raccolta = true
 	
-	#Data : indica le monete raccolte
-	get_parent().get_node("Data").monete_raccolte+=1

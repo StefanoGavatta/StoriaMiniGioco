@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/color/icon_map_2.png")
+
 extends Node2D
 
 @onready var carica_nuova_nuvola: Timer = $Timer

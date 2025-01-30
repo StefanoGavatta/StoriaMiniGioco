@@ -19,9 +19,9 @@ position = Vector2(6.5, -14.5)
 shape = SubResource("RectangleShape2D_4q6hr")
 
 [node name="vita" type="Label" parent="."]
-offset_left = -16.0
-offset_top = -196.0
-offset_right = 24.0
-offset_bottom = -182.0
+offset_left = -13.0
+offset_top = -151.0
+offset_right = 27.0
+offset_bottom = -137.0
 text = "Vita"
 horizontal_alignment = 1

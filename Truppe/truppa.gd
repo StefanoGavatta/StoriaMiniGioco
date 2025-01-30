@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node/icon_character.png")
+
 extends CharacterBody2D
 
 @export var vita: int = 30

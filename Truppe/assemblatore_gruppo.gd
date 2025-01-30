@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node/icon_magnifier.png")
+
 extends Node
 
 #nodo che seleziona in base al gruppo di appartenenza quali tipi di valori assegnare

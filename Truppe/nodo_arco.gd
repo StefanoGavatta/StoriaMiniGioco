@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node/icon_bullet.png")
+
 extends Node
 
 @onready var truppa: CharacterBody2D = $".."

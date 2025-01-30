@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node_3D/icon_hammer.png")
+
 extends Node
 
 const Spada = preload("res://Truppe/truppa.tscn")

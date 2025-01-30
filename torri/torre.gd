@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node/icon_map.png")
+
 extends StaticBody2D
 
 const torre_alleata = preload("res://torri/Sprite_TowerBLUE.png")
@@ -46,10 +46,7 @@ func prendiDanno(danno: int):
 
 func esplodi():
 	get_tree().reload_current_scene()
-	
-	
-	$"../../Data".componi()
-	
+
 	queue_free()
 
 func aggiornaVita():

@@ -1,10 +1,10 @@
+Marker2D
 Node
 Timer
 Label
 Control
 AnimatedSprite2D
 AnimationPlayer
-Marker2D
 Button
 Sprite2D
 StaticBody2D

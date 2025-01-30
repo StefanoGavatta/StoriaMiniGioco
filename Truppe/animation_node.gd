@@ -1,4 +1,4 @@
-@icon("res://IconGodotNode/node/icon_brush.png")
+
 extends Node
 
 const labelDanno = preload("res://DannoRicevuto/danno_ricevuto.tscn")
