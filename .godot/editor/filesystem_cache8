@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738245848
+::res://::1739452188
 decrypted.txt::TextFile::-1::1738242578::0::1::::<><>::
 download.png::CompressedTexture2D::2187404282223933199::1738242578::1738242647::1::::<><>::
 encrypted.txt::TextFile::-1::1738242578::0::1::::<><>::
@@ -61,11 +61,11 @@ PBP-V2.png::CompressedTexture2D::5931607109468531224::1738242574::1738242650::1:
 pixelcardassest_v02.png::CompressedTexture2D::2137013993357201748::1738242574::1738242650::1::::<><>::
 spadacartaimage.png::CompressedTexture2D::4544870376687307100::1738242574::1738242650::1::::<><>::
 wood.png::CompressedTexture2D::4495940561436344462::1738242574::1738242650::1::::<><>::
-::res://DannoRicevuto/::1738245626
+::res://DannoRicevuto/::1738245927
 control.gd::GDScript::-1::1738242574::0::1::::<>Label<>::
 danno_ricevuto.gd::GDScript::-1::1738242574::0::1::::<>RefCounted<>::
 danno_ricevuto.tscn::PackedScene::2032207682120522208::1738245625::0::1::::<><>::res://DannoRicevuto/control.gd
-hit_flash.tres::VisualShader::741873425494494923::1738244378::0::1::::<><>::
+hit_flash.tres::VisualShader::741873425494494923::1738245927::0::1::::<><>::
 ::res://Giocatore/::1738243828
 gestore_giocatore.gd::GDScript::-1::1738243828::0::1::::<>Node<>::
 ::res://IconGodotNode/::1738242577
@@ -383,10 +383,10 @@ card.gd::GDScript::-1::1738242578::0::1::::Card<>Control<>::
 card.tscn::PackedScene::7638245932310274064::1738245624::0::1::::<><>::res://UI/card.gd<>uid://rwuyeghxdeq2::::res://BackGround/carta.png<>uid://b50tl64iovujs::::res://CardAssets/spadacartaimage.png<>uid://5pgkqloflvvo::::res://CardAssets/pixelcardassest_v02.png
 card_container.tscn::PackedScene::8753359073322484880::1738245625::0::1::::<><>::uid://dg3a2aq0axjau::::res://UI/card.tscn<>uid://b50tl64iovujs::::res://CardAssets/spadacartaimage.png<>uid://xclglpnotj2::::res://CardAssets/lanciaimagecarta.png<>uid://df7xxed1w58dj::::res://CardAssets/Archer_Blue1.png
 miglioramenti.gd::GDScript::-1::1738243741::0::1::::<>Control<>::
-::res://World/::1738245623
+::res://World/::1738245932
 background.gd::GDScript::-1::1738243826::0::1::::<>Node2D<>::
 gestore_nemici.gd::GDScript::-1::1738243828::0::1::::<>Node<>::
-world.tscn::PackedScene::138315068722508341::1738245623::0::1::::<><>::res://World/background.gd<>uid://b28taoeklh0fc::::res://BackGround/Background.png<>uid://dn1viqrgtvoa0::::res://torri/torre.tscn<>uid://dtvwo0n6mlyoj::::res://Tileset/Tiles.png<>res://Giocatore/gestore_giocatore.gd<>uid://dwygssc405sua::::res://UI/card_container.tscn<>res://World/gestore_nemici.gd<>res://monete/generatore_monete.gd<>uid://dmvwrc225nj11::::res://CardAssets/Minecraftchmc-dBlX.ttf<>res://UI/miglioramenti.gd<>uid://cqrkx5cbx1j17::::res://CardAssets/PBP-V2.png<>res://LanPartyReq/lan_party_node.gd
+world.tscn::PackedScene::138315068722508341::1738245932::0::1::::<><>::res://World/background.gd<>uid://b28taoeklh0fc::::res://BackGround/Background.png<>uid://dn1viqrgtvoa0::::res://torri/torre.tscn<>uid://dtvwo0n6mlyoj::::res://Tileset/Tiles.png<>res://Giocatore/gestore_giocatore.gd<>uid://dwygssc405sua::::res://UI/card_container.tscn<>res://World/gestore_nemici.gd<>res://monete/generatore_monete.gd<>uid://dmvwrc225nj11::::res://CardAssets/Minecraftchmc-dBlX.ttf<>res://UI/miglioramenti.gd<>uid://cqrkx5cbx1j17::::res://CardAssets/PBP-V2.png<>res://LanPartyReq/lan_party_node.gd
 ::res://World/Nuvole/::1738245626
 nuvola.gd::GDScript::-1::1738242578::0::1::::<>Sprite2D<>::
 nuvola.tscn::PackedScene::4180651513626736290::1738245626::0::1::::<><>::uid://cs4xgo6fwiry4::::res://BackGround/C2013.png<>res://World/Nuvole/nuvola.gd
