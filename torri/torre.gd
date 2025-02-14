@@ -45,8 +45,10 @@ func prendiDanno(danno: int):
 		esplodi()
 
 func esplodi():
-	get_tree().reload_current_scene()
-
+	var vittoria = true
+	if self.is_in_group("Alleato"):
+		vittoria = false
+	$"../..".fine_partita($"../../LanPartyNode".tempoPassato, randi_range(300,600), randi_range(1000,6000), vittoria)
 	queue_free()
 
 func aggiornaVita():

@@ -1,5 +1,6 @@
-[gd_scene load_steps=56 format=4 uid="uid://b8aa8q1x08m8"]
+[gd_scene load_steps=57 format=4 uid="uid://b8aa8q1x08m8"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_fs6n2"]
 [ext_resource type="Script" path="res://World/background.gd" id="1_quvg8"]
 [ext_resource type="Texture2D" uid="uid://b28taoeklh0fc" path="res://BackGround/Background.png" id="2_6rcl3"]
 [ext_resource type="PackedScene" uid="uid://dn1viqrgtvoa0" path="res://torri/torre.tscn" id="2_wah31"]
@@ -2061,6 +2062,7 @@ corner_radius_bottom_left = 15
 anti_aliasing_size = 4.915
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_fs6n2")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Node2D" parent="."]
@@ -2400,9 +2402,6 @@ vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="LanPartyNode/Tempo"]
 autostart = true
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(1146, 0)
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="crea_nuvola"]
 [connection signal="timeout" from="GestoreGiocatore/ValutaTimer" to="GestoreGiocatore" method="_on_valuta_timer_timeout"]

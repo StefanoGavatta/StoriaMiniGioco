@@ -6,6 +6,7 @@ var secondi: int = 0
 var minuti:int = 0 
 
 func _on_timer_timeout() -> void:
+	tempoPassato+=1
 	secondi += 1
 	if secondi == 60:
 		minuti += 1
