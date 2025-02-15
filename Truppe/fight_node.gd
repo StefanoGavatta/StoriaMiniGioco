@@ -24,8 +24,9 @@ func abilitaTimer():
 func attacca():
 	$"../AnimationNode".attacco_signal()
 	if RayCast.is_colliding():
-		RayCast.get_collider().prendiDanno(get_parent().danno+randi_range(-2,3)) #effettua il danno
-		abilitaTimer() # riabilita il danno per il prossimo attacco
+		if is_instance_valid(RayCast.get_collider()):
+			RayCast.get_collider().prendiDanno(get_parent().danno+randi_range(-2,3)) #effettua il danno
+			abilitaTimer() # riabilita il danno per il prossimo attacco
 
 func abilita_combattimento():
 	get_parent().is_fighting = true

@@ -45,11 +45,53 @@ func prendiDanno(danno: int):
 		esplodi()
 
 func esplodi():
+	$CollisionShape2D.disabled = true
 	var vittoria = true
 	if self.is_in_group("Alleato"):
 		vittoria = false
-	$"../..".fine_partita($"../../LanPartyNode".tempoPassato, randi_range(300,600), randi_range(1000,6000), vittoria)
+	var dati = calcola_punteggio_finale($"../../LanPartyNode".tempoPassato,vittoria)
+	$"../..".fine_partita($"../../LanPartyNode".tempoPassato, dati[0], dati[1], vittoria)
+	
 	queue_free()
 
 func aggiornaVita():
 	$vita.text = str(vita) + "/" + str(700)
+
+
+func calcola_punteggio_finale(tempo:int, vittoria: bool):
+	var max_punteggio: int = 5000
+	var min_punteggio: int = 2500
+	var min_bricoCoin: int = 300
+	var max_bricoCoin: int = 600
+	
+	var punteggio := 0
+	var bricoCoin := 0
+	if tempo<80 && vittoria:
+		for i in range(2):
+			aggiungiValore(max_punteggio,max_bricoCoin)
+			aggiungiValore(min_punteggio,min_bricoCoin)
+	else:
+		diminuisciValore(max_punteggio,max_bricoCoin)
+		diminuisciValore(min_punteggio,min_bricoCoin)
+	
+	if vittoria:
+		for i in range(3):
+			aggiungiValore(max_punteggio,max_bricoCoin)
+			aggiungiValore(min_punteggio,min_bricoCoin)
+	else:
+		for i in range(3):
+			diminuisciValore(max_punteggio,max_bricoCoin)
+			diminuisciValore(min_punteggio,min_bricoCoin)
+			
+	if min_bricoCoin<0:
+		min_bricoCoin = 0
+	
+	punteggio = randi_range(min_punteggio,max_punteggio)
+	bricoCoin = randi_range(min_bricoCoin,max_bricoCoin)
+	return [punteggio, bricoCoin]
+func diminuisciValore(punteggio, bricoCoin):
+	punteggio -= 1000
+	bricoCoin -= 100
+func aggiungiValore(punteggio, bricoCoin):
+	punteggio += 1000
+	bricoCoin += 100

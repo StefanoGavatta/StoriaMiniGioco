@@ -1,7 +1,7 @@
 extends Control
 class_name menu
 
-const MENU = preload("res://menu/menu_vittoria.tscn")
+const MENU = preload("uid://ckyiqs8iaextm")
 
 @onready var tempo_impiegato: Label = $Card/TempoTab/DescriptionTempo/containerdati/TempoImpiegato
 @onready var bricoguadagnati: Label = $Card/CoinTab/DescriptionBricoCoin/containerdati/Bricoguadagnati

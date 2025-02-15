@@ -16,3 +16,6 @@ func _on_timer_timeout() -> void:
 		tempo.text = str(minuti) + ":" + "0" + str(secondi)
 	else:
 		tempo.text = str(minuti) + ":" + str(secondi)
+
+func calcola_punteggi():
+	pass
